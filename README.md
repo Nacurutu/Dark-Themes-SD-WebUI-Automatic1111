@@ -257,9 +257,12 @@ https://necolas.github.io/normalize.css/
 > I dont know anything about CSS or coding, so, this is a janky alpha version of a CSS file made by try and error that we can use to simulate a dark mode on the Stable Diffusion WebUI.
 
 
+<h3 align="center">
+
+![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
 
 
 <h3 align="center">
-	<img src="https://user-images.githubusercontent.com/18109442/210567328-412e1903-5126-4ebf-a3cc-1c58a2fc30f6.png" width="100" alt="Logo"/><br/>
+<img src="https://user-images.githubusercontent.com/18109442/210567328-412e1903-5126-4ebf-a3cc-1c58a2fc30f6.png" width="100" alt="Logo"/><br/>
 	
-![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
+

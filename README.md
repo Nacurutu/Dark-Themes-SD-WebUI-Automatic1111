@@ -29,7 +29,7 @@ What you can get with this?
 ```
 
 <h3 align="center">
--- Custom Dark theme examples for Stable Diffusion WebUI screenshot --
+-- Custom Dark theme examples for Stable Diffusion WebUI --
 
 
 

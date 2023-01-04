@@ -4,7 +4,9 @@
 	Dark Themes for <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Stable Diffusion Web UI</a>
 	<img src="https://user-images.githubusercontent.com/18109442/210565532-ae64cfbb-b199-48ed-b8f8-036e01a53285.png" height="30" width="0px"/>
 
-![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
+	
+![rainbow-rainbow-bar](https://user-images.githubusercontent.com/18109442/210574757-262e24d2-3ab7-4fa5-bf64-935187bb5c6f.gif)
+		
 
 <h4 align="left">
 What you can get with this?
@@ -12,6 +14,7 @@ What you can get with this?
 
 - Changes the dark theme color scheme of your Stable Diffusion WebUI 
 - Purely aesthetic changes
+
 
 
 ```
@@ -186,7 +189,7 @@ Done.
 ---
 <h4 align="center">
 
-![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
+![rainbow-rainbow-bar](https://user-images.githubusercontent.com/18109442/210574757-262e24d2-3ab7-4fa5-bf64-935187bb5c6f.gif)
 
 <h4 align="left">
 
@@ -211,7 +214,7 @@ Done:
 
 <h4 align="center">
 
-![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
+![rainbow-rainbow-bar](https://user-images.githubusercontent.com/18109442/210574757-262e24d2-3ab7-4fa5-bf64-935187bb5c6f.gif)
 
 <h4 align="left">
 

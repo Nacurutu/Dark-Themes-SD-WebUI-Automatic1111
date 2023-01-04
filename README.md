@@ -146,8 +146,8 @@ Change the color variables on the user.css for the ones you want.
     /*ENDCOLORPICKERS*/
     --UI_radius: 0;
     /*BREAKFILEREADER*/ 
-    --logo: url('file=extensions/sd-web-ui-quickcss/logos/logo.png');
-    --favicon: url('file=extensions/sd-web-ui-quickcss/favicons/favicon.svg');
+    --logo: url('file=logo.png');
+    --favicon: url('file=favicon.svg');
  
 }
 ```
@@ -163,26 +163,6 @@ The Variables you need to change on the user.css file are:
 
 
 You can use HEX or RGB values. (HEX to be compatible with the Extension)
-
-Note:
-Logo and Favicon on Extension folder.
-If you are not going to use the extension, change these values:
-
-
-```
-  /*BREAKFILEREADER*/ 
-    --logo: url('file=extensions/sd-web-ui-quickcss/logos/logo.png');
-    --favicon: url('file=extensions/sd-web-ui-quickcss/favicons/favicon.svg');
-
-```
-to these ones (and put the files on the WebUI root folder):
-
-```
-  /*BREAKFILEREADER*/ 
-    --logo: url('file=logo.png');
-    --favicon: url('file=favicon.svg');
-```
-
 
 Done.
 

@@ -19,12 +19,12 @@ Original Style.css Edit
     --Input_text_color_focus: #ffffff;
     --App_color: #a7abb1;
     --Background_color: #000;
+    --Checked_text: #ff205f;
     /*ENDCOLORPICKERS*/
     --UI_radius: 0;
     /*BREAKFILEREADER*/
-    
-    --logo: url('file=extensions/sd-web-ui-quickcss/logos/logo.png');
-    --favicon: url('file=extensions/sd-web-ui-quickcss/favicons/favicon.svg');
+    --logo: url('file=logo.png');
+    --favicon: url('file=favicon.svg');
 }
 
 /* Quickcss extension */
@@ -34,7 +34,7 @@ Original Style.css Edit
 }
 
 input[type=checkbox]:checked + span, input[type=radio]:checked + span {
-    color: var(--App_color)!important;
+    color: var(--App_color);
 }
 
 #quickcss_colorpicker {
@@ -91,7 +91,8 @@ input[type=color] {
 
 /* UI border radius */
 /*----------------------------------------------------------------*/
-* {
+
+.gradio-container * {
     border-radius: calc(1px *var(--UI_radius)) !important;
 }
 
@@ -108,6 +109,9 @@ input[type=color] {
 .dark .\!text-gray-800 {
     color: var(--App_color) ;
 }
+
+/* Input Colors */
+/*----------------------------------------------------------------*/
 
 .dark .gr-input {
     font-family: 'Source Code Pro', monospace ;
@@ -166,7 +170,7 @@ img2maskimg, #img2maskimg > .h-60, #img2maskimg > .h-60 > div, #img2maskimg > .h
 #img2img-grids_images_history_gallery,
 #Extras_images_history_gallery, 
 #Favorites_images_history_gallery {
-    border-radius: 0px !important;
+    border-radius: calc(1px *var(--UI_radius)) !important;
     background-image: var(--logo) !important;
     background: none;
     background-size: cover ;
@@ -262,7 +266,7 @@ img2maskimg, #img2maskimg > .h-60, #img2maskimg > .h-60 > div, #img2maskimg > .h
     font-weight: bold;
     transition: all 0.3s ease-in-out ;   
 }
-    
+
 #txt2img_interrupt, 
 #img2img_interrupt, 
 #txt2img_skip, 

@@ -19,11 +19,12 @@ Original Style.css Edit
     --Input_text_color_focus: #ffffff;
     --App_color: #F2910A;
     --Background_color: #2C2D34;
+    --Checked_text: #ff205f;
     /*ENDCOLORPICKERS*/
     --UI_radius: 0;
     /*BREAKFILEREADER*/
-    --logo: url('file=extensions/sd-web-ui-quickcss/logos/logo.png');
-    --favicon: url('file=extensions/sd-web-ui-quickcss/favicons/favicon.svg');
+    --logo: url('file=logo.png');
+    --favicon: url('file=favicon.svg');
 }
 
 /* Quickcss extension */
@@ -33,7 +34,7 @@ Original Style.css Edit
 }
 
 input[type=checkbox]:checked + span, input[type=radio]:checked + span {
-    color: var(--App_color)!important;
+    color: var(--App_color);
 }
 
 #quickcss_colorpicker {
@@ -90,7 +91,8 @@ input[type=color] {
 
 /* UI border radius */
 /*----------------------------------------------------------------*/
-* {
+
+.gradio-container * {
     border-radius: calc(1px *var(--UI_radius)) !important;
 }
 

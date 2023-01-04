@@ -1,0 +1,1535 @@
+/*user.css
+Custom Dark theme for Stable Diffusion WebUI 
+Original Style.css Edit
+
+* @Version: alpha-v1.5
+* @Author: Nacurutu
+* @Last Modified: 2023-01-05
+* @Neon
+
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+
+/*THEME VARIABLES*/
+:root, * , quickcss_target{
+    --Primary_color: #ff205f;
+    --Secondary_color: #a3133c;
+    --Input_text_color: #65f6ae;
+    --Input_text_color_focus: #ffffff;
+    --App_color: #a7abb1;
+    --Background_color: #000;
+    /*ENDCOLORPICKERS*/
+    --UI_radius: 0;
+    /*BREAKFILEREADER*/
+    
+    --logo: url('file=extensions/sd-web-ui-quickcss/logos/logo.png');
+    --favicon: url('file=extensions/sd-web-ui-quickcss/favicons/favicon.svg');
+}
+
+/* Quickcss extension */
+/*----------------------------------------------------------------*/
+#hidden{
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked + span, input[type=radio]:checked + span {
+    color: var(--App_color)!important;
+}
+
+#quickcss_colorpicker {
+    max-width: 10vw;
+}
+
+input[type=color] {
+    width: 100%;
+}
+
+/*================================================ */
+/* User.css Changes */
+/*================================================ */
+
+/* Import font */
+/*----------------------------------------------------------------*/
+@font-face {
+    font-family: 'Source Code Pro', monospace ;
+    src: url('SourceCodePro-Regular.otf') ;
+}
+
+/*Css hide Gradio animations*/
+/*----------------------------------------------------------------*/
+/* Trying to hide Gradio progress bar here, but still cant figure out how */
+/*----------------------------------------------------------------*/
+
+* .wrap .m-12, 
+* .wrap .z-20,
+* .meta-text-center, 
+* .meta-text,
+* .wrap .m-12 svg, 
+* .wrap .z-20 svg {
+    display:none ;
+} 
+    
+/* gradio 3.8 adds opacity to progressbar which makes it blink; disable it here */
+
+.dark .transition.opacity-20 {
+    opacity: 1 ;
+  }
+
+/* Tab buttons */
+/*----------------------------------------------------------------*/
+
+#tabs > div:first-of-type button {
+    font-size: 90% ;
+    transition: all 0.3s ease-in-out ;
+}
+
+#tabs > div:first-of-type button:hover
+{
+    border-color: 0 0 0 0.2em var(--Input_text_color_focus) ;
+}
+
+/* UI border radius */
+/*----------------------------------------------------------------*/
+* {
+    border-radius: calc(1px *var(--UI_radius)) !important;
+}
+
+/* App Colors */
+/*----------------------------------------------------------------*/
+.dark,
+.dark\:bg-gray-900, 
+.dark .gr-button-primary, 
+.dark .dark\:text-gray-200, 
+.dark .text-gray-700, 
+.dark .text-gray-800, 
+.dark .text-gray-900, 
+.dark .\!text-gray-700, 
+.dark .\!text-gray-800 {
+    color: var(--App_color) ;
+}
+
+.dark .gr-input {
+    font-family: 'Source Code Pro', monospace ;
+    font: 'Source Code Pro' ;
+    color: var(--Input_text_color) ;
+    transition: all 0.3s ease-in-out ;
+}
+
+.dark .gr-input:focus, 
+.dark .gr-input:hover  {
+    color: var(--Input_text_color_focus);
+    background-color: var(--Secondary_color);
+    border-color: var(--Input_text_color_focus);
+}
+
+.dark .gr-input::selection {
+    color: var(--Input_text_color_focus);
+    background-color: var(--Background_color);
+}
+
+/* Background colors */
+/*----------------------------------------------------------------*/
+.dark, 
+.dark .gr-button, 
+.dark .bg-white, 
+.dark .gr-panel, 
+.dark .gr-button-lg, 
+.dark .gr-box,
+.dark .gr-button-tool, 
+.dark .dark\:bg-gray-700, 
+.dark .dark\:bg-gray-950,
+.dark fieldset span.text-gray-500, 
+.dark .gr-block.gr-box span.text-gray-500,
+.dark label.block span {
+    background-color: var(--Background_color) ;
+}
+
+
+#img2img_image, #img2img_image > .h-60, #img2img_image > .h-60 > div, #img2img_image > .h-60 > div > img,
+img2maskimg, #img2maskimg > .h-60, #img2maskimg > .h-60 > div, #img2maskimg > .h-60 > div > img
+{
+    background-color: var(--Background_color); 
+}
+
+/* Galleries */
+/*----------------------------------------------------------------*/
+#txt2img_gallery, 
+#img2img_gallery,
+#extras_gallery,
+#depthmap_gallery,
+#ti_gallery,
+#sp_gallery,
+#txt2img_images_history_gallery,
+#img2img_images_history_gallery,
+#txt2img-grids_images_history_gallery,
+#img2img-grids_images_history_gallery,
+#Extras_images_history_gallery, 
+#Favorites_images_history_gallery {
+    border-radius: 0px !important;
+    background-image: var(--logo) !important;
+    background: none;
+    background-size: cover ;
+    background-position: center center ;
+    background-repeat: no-repeat ;
+    transition: all 1s ease-in-out ;
+    box-shadow: 0 0 0 0.2em transparent;
+} 
+
+#txt2img_gallery:hover,
+#img2img_gallery:hover,
+#extras_gallery:hover,
+#depthmap_gallery:hover,
+#ti_gallery:hover,
+#sp_gallery:hover {
+    box-shadow: 0 0 0 0.5em transparent;
+    animation: pulse2 .3s, change-color-border 5s linear infinite;
+    -webkit-animation: pulse2 0.3s, change-color-border 5s linear infinite;
+    -moz-animation: pulse2 0.3s, change-color-border 5s linear infinite;
+    -o-animation: pulse2 0.3s, change-color-border 5s linear infinite;
+}
+
+@keyframes change-color-border {
+    0% {border-color: var(--Input_text_color_focus);}
+    25% {border-color: var(--Secondary_color);}
+    50% {border-color: var(--Input_text_color_focus);}
+    75% {border-color: var(--Background_color);}
+    100% {border-color: var(--Input_text_color_focus);}    
+}
+
+#txt2img_gallery svg, 
+#img2img_gallery svg,
+#extras_gallery svg,
+#depthmap_gallery svg,
+#ti_gallery svg,
+#sp_gallery svg,
+#txt2img_images_history_gallery svg,
+#img2img_images_history_gallery svg,
+#txt2img-grids_images_history_gallery svg,
+#img2img-grids_images_history_gallery svg,
+#Extras_images_history_gallery svg, 
+#Favorites_images_history_gallery svg {
+    display: none ;
+}
+
+.dark .gr-input-label, 
+.dark .gr-button {
+    background-image:  none ;
+    transition: all 0.3s ease-in-out ;
+}
+
+
+
+/* Checks */
+/*----------------------------------------------------------------*/
+.dark .gr-check-radio:checked {
+    background-color: var(--Primary_color) ;
+    
+}
+
+.dark .gr-input-label:hover {
+    border-color: var(--Secondary_color);
+    color: var(--Input_text_color_focus);
+    animation: pulse3 0.3s;
+    -webkit-animation: pulse3 0.3s;
+    -moz-animation: pulse3 0.3s;
+    -o-animation: pulse3 0.3s;
+    box-shadow: 0 0 0 0.5em transparent;
+}
+      @keyframes pulse3 {
+        0% { box-shadow: 0 0 0 0 var(--Secondary_color); }
+}
+
+/* Generate progress bar style */
+/*----------------------------------------------------------------*/
+.dark .progressDiv .progress {
+    font-family: 'Source Code Pro', monospace ;
+    font: 'Source Code Pro';
+    background: var(--Primary_color) ;
+    color: var(--Input_text_color_focus);
+    font-weight: bold ;
+    line-height: 20px ;
+    text-align: right ;
+    border-radius: calc(1px *var(--UI_radius)) !important;
+}
+
+/* Buttons */
+/*----------------------------------------------------------------*/
+#txt2img_generate, 
+#img2img_generate {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out ;   
+}
+    
+#txt2img_interrupt, 
+#img2img_interrupt, 
+#txt2img_skip, 
+#img2img_skip {
+    background: var(--Background_color) ;
+    z-index: 11;
+    transition: all 0.3s ease-in-out ;
+}
+  
+#txt2img_interrupt:hover, 
+#img2img_interrupt:hover, 
+#txt2img_skip:hover, 
+#img2img_skip:hover {
+    background: var(--Secondary_color) ;
+    color: var(--Input_text_color_focus) ;
+    z-index: 11;
+}
+
+.dark .gr-button-primary,
+#modelmerger_merge, 
+#deforum_generate, 
+#depthmap_generate, 
+#vxa_gen_btn {
+    font-family: 'Source Code Pro', monospace ;
+    font: 'Source Code Pro' ;
+    text-transform: uppercase;
+    border-color: var(--Primary_color) ;
+    border-width: 4px ;
+    background-image: var(--logo) ;
+    background-size: cover ;
+    background-position: center center ;
+    background-repeat: no-repeat ;
+    color: var(--App_color) ;
+    z-index: 10;
+    transition: all 0.3s ease-in-out ;
+}
+
+.dark .gr-button-secondary, .dark .gr-button-tool {
+    font-family: 'Source Code Pro', monospace ;
+    font: 'Source Code Pro' ;
+    border-color: var(--Secondary_color) ;
+    border-width: 1px ;
+    color: var(--App_color) ;
+    transition: all 0.3s ease-in-out ;
+}
+
+/* Buttons pulse effect */
+/*----------------------------------------------------------------*/
+
+/*Generate*/
+#txt2img_generate:hover, #img2img_generate:hover {
+    letter-spacing: 1rem;
+    box-shadow: 0 0 0 2em transparent;
+} 
+
+#txt2img_generate:active, #img2img_generate:active {
+    animation: pulse 0.3s;
+    -webkit-animation: pulse 0.3s; 
+    -moz-animation: pulse 0.3s;
+    -o-animation: pulse 0.3s;
+}   
+@keyframes pulse {
+      0% { box-shadow: 0 0 0 0 var(--Primary_color) }
+}   
+ /*Primary*/
+.dark .gr-button-primary:hover,
+#modelmerger_merge:hover, 
+#deforum_generate:hover, 
+#depthmap_generate:hover, 
+#vxa_gen_btn:hover 
+{
+    border-color: var(--Input_text_color_focus);
+    border-width: 4px ;
+    background-color: var(--Primary_color) ;
+    color: var(--Input_text_color_focus) ;
+    animation: pulse2 0.3s;
+    -webkit-animation: pulse2 0.3s;
+    -moz-animation: pulse2 0.3s;
+    -o-animation: pulse2 0.3s;
+    box-shadow: 0 0 0 0.5em transparent;
+}  
+
+/*Secondary*/
+.dark .gr-button-secondary:hover, .dark .gr-button-tool:hover {
+    border-color: var(--Input_text_color_focus);
+    border-width: 1px ;
+    background-color: var(--Secondary_color);
+    color: var(--Input_text_color_focus) ;
+    box-shadow: 0 0 0 0.5em transparent;
+    animation: pulse2 0.3s;
+    -webkit-animation: pulse2 0.3s;
+    -moz-animation: pulse2 0.3s;
+    -o-animation: pulse2 0.3s;
+    }
+    
+    @keyframes pulse2 {
+      0% { box-shadow: 0 0 0 0 var(--Input_text_color_focus); }
+}
+
+/* gradio 3.4.1 stuff for editable scrollbar values */
+/*----------------------------------------------------------------*/
+.dark .gr-box > div > div > input.gr-text-input{
+    position: absolute ;
+    right: 0.5em ;
+    top: -0.6em ;
+    z-index: 200 ;
+    width: 8em ;
+    border-color: var(--Secondary_color) ;
+}
+
+.dark .gr-box > div > div > input.gr-text-input:hover, 
+.dark .gr-box > div > div > input.gr-text-input:focus {
+    border-color: var(--Input_text_color_focus) ;
+}
+
+/* Gallery */
+/*----------------------------------------------------------------*/
+#gallery_item {
+    border-width: 2px ;
+}
+
+.dark .gallery-item.svelte-1g9btlg.svelte-1g9btlg {
+    --tw-ring-color: var(--Primary_color) !important;
+}
+
+.dark .dark\:bg-gray-900 {
+    --tw-bg-opacity: 1;
+    background-color: var(--Background_color) ;
+}
+
+/* Context menu */
+/*----------------------------------------------------------------*/
+#context-menu {
+    font-family: 'Source Code Pro', monospace ;
+    font: 'Source Code Pro';
+    border-color: var(--Primary_color);
+    /*box-shadow: 1px 1px 2px var(--Primary_color) ;*/
+}
+
+.dark .context-menu-items a:hover {
+    background: var(--Secondary_color) ;
+    color: var(--Input_text_color_focus) ;
+    /*box-shadow: 1px 1px 2px var(--Secondary_color) ;*/
+    
+}
+.dark .context-menu-items {
+        transition: all 0.3s ease-in-out ;
+
+}
+
+/* Quicksettings */
+/*----------------------------------------------------------------*/
+#setting_sd_hypernetwork_strength, 
+#setting_CLIP_stop_at_last_layers, 
+#setting_inpainting_mask_weight {
+    display: grid ;
+    row-gap: 1em ;
+          
+}
+
+/*-------------------------------------*/
+/*---------------Sliders-------------- */
+/*-------------------------------------*/
+
+.gradio-container input[type=range] {
+    -webkit-appearance: none ;
+    background: transparent ;
+}
+
+.gradio-container input[type=range]:focus {
+    outline: none ;
+}
+
+.gradio-container input[type=range]::-webkit-slider-runnable-track {
+    cursor: pointer ;
+    height: 6px ;
+    border-radius: 3px ;
+    background:  var(--App_color) ;
+    
+}
+
+.gradio-container input[type=range]:hover::-webkit-slider-runnable-track {
+    background-image: linear-gradient(90deg, var(--App_color), var(--Primary_color));
+    background-repeat: no-repeat;
+}
+
+.gradio-container input[type=range]::-moz-range-track {
+    cursor: pointer ;
+    height: 6px ;
+    border-radius: 3px ;
+    background:  var(--Primary_color) ;
+}
+
+.gradio-container input[type=range]:hover::-moz-range-track {
+    background: var(--Secondary_color) ;
+}
+
+.gradio-container input[type=range]::-ms-fill-upper,
+.gradio-container input[type=range]::-ms-fill-lower {
+    cursor: pointer ;
+    height: 6px ;
+    border-radius: 3px ;
+    background:   var(--Primary_color) ;
+}
+
+.gradio-container input[type=range]:hover::-ms-fill-upper,
+.gradio-container input[type=range]:hover::-ms-fill-lower {
+    background:   var(--Secondary_color) ;
+}
+
+.gradio-container input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0 0 3px var(--App_color) ;
+    border: 2px solid var(--App_color) ;
+    height: 16px ;
+    width: 16px ;
+    border-radius: 16px ;
+    background:   var(--Primary_color) ;
+    cursor: pointer ;
+    -webkit-appearance: none ;
+    margin-top: -5px ;
+}
+
+.gradio-container input[type=range]:active::-webkit-slider-thumb {
+    background:   var(--Secondary_color) ;
+}
+
+.gradio-container input[type=range]::-moz-range-thumb {
+    box-shadow: 0 0 3px var(--App_color) ;
+    border: 2px solid  var(--App_color) ;
+    height: 16px ;
+    width: 16px ;
+    border-radius: 16px ;
+    background:   var(--Primary_color) ;
+    cursor: pointer ;
+    margin-top: -5px ;
+}
+
+.gradio-container input[type=range]:active::-moz-range-thumb {
+    background:   var(--Secondary_color) ;
+}
+
+.gradio-container input[type=range]::-ms-thumb {
+    box-shadow: 0 0 3px var(--App_color) ;
+    border: 2px solid  var(--App_color) ;
+    height: 16px ;
+    width: 16px ;
+    border-radius: 16px ;
+    background:   var(--Primary_color) ;
+    cursor: pointer ;
+    margin-top: -5px ;
+}
+
+.gradio-container input[type=range]:active::-ms-thumb {
+    background:   var(--Secondary_color) ;
+}
+
+
+
+
+/*----------------------------------------------------------------*/
+/* End of changes */
+/*----------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------*/
+/* Normalize.css */
+
+/*Normalize.css makes browsers render all elements more consistently and in line with modern standards. 
+It precisely targets only the styles that need normalizing.
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+  /* Sections
+     ========================================================================== */
+  
+  /**
+   * Remove the margin in all browsers.
+   */
+  
+  body {
+    margin: 0;
+  }
+  
+  /**
+   * Render the `main` element consistently in IE.
+   */
+  
+  main {
+    display: block;
+  }
+  
+  /**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  /* Grouping content
+     ========================================================================== */
+  
+  /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+  
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /* Text-level semantics
+     ========================================================================== */
+  
+  /**
+   * Remove the gray background on active links in IE 10.
+   */
+  
+  a {
+    background-color: transparent;
+  }
+  
+  /**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+  
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  
+  /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+  
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /**
+   * Add the correct font size in all browsers.
+   */
+  
+  small {
+    font-size: 80%;
+  }
+  
+  /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+  
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  /* Embedded content
+     ========================================================================== */
+  
+  /**
+   * Remove the border on images inside links in IE 10.
+   */
+  
+  img {
+    border-style: none;
+  }
+  
+  /* Forms
+     ========================================================================== */
+  
+  /**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+  
+  /**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+  
+  button,
+  input { /* 1 */
+    overflow: visible;
+  }
+  
+  /**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+  
+  button,
+  select { /* 1 */
+    text-transform: none;
+  }
+  
+  /**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+  
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+  
+  /**
+   * Remove the inner border and padding in Firefox.
+   */
+  
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  /**
+   * Restore the focus styles unset by the previous rule.
+   */
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  /**
+   * Correct the padding in Firefox.
+   */
+  
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  
+  /**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+  
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  
+  /**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+  
+  progress {
+    vertical-align: baseline;
+  }
+  
+  /**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+  
+  textarea {
+    overflow: auto;
+  }
+  
+  /**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+  
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+  
+  /**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+  
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+  /**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+  
+  [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+  
+  /**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+  
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  
+  /**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+  
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+  
+  /* Interactive
+     ========================================================================== */
+  
+  /*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+  
+  details {
+    display: block;
+  }
+  
+  /*
+   * Add the correct display in all browsers.
+   */
+  
+  summary {
+    display: list-item;
+  }
+  
+  /* Misc
+     ========================================================================== */
+  
+  /**
+   * Add the correct display in IE 10+.
+   */
+  
+  template {
+    display: none;
+  }
+  
+  /**
+   * Add the correct display in IE 10.
+   */
+  
+  [hidden] {
+    display: none;
+  }
+  
+
+
+/*----------------------------------------------------------------*/
+/* Test code space*/
+/*----------------------------------------------------------------*/
+
+/*
+prevent_thread_lock=True,
+favicon_path="favicon.svg",
+*/
+/*================================================ */
+/* Original style.css - Untouched Parameters */
+/*================================================ */
+
+
+/* Max weight of the app Container (1-100%) 
+.container {
+    max-width: 100%;
+}
+
+
+ /* Separation between 2 main components on txt2img tab 
+#txt2img_token_counter {
+    height: 0px;
+}
+
+ /* Separation between 2 main components on img2img tab 
+#img2img_token_counter {
+    height: 0px;
+}
+
+/* 
+#sh{
+    min-width: 2em;
+    min-height: 2em;
+    max-width: 2em;
+    max-height: 2em;
+    flex-grow: 0;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    margin: 0.1em 0;
+    opacity: 0%;
+    cursor: default;	
+}
+
+.output-html p {margin: 0 0.5em;}
+
+.row > *,
+.row > .gr-form > * {
+    min-width: min(120px, 100%);
+    flex: 1 1 0%;
+}
+
+.performance {
+    font-size: 0.85em;
+    color: #444;
+}
+
+.performance p{
+    display: inline-block;
+}
+
+.performance .time {
+    margin-right: 0;
+}
+
+.performance .vram {
+}
+
+#txt2img_generate, #img2img_generate {
+    min-height: 4.5em;
+}
+
+@media screen and (min-width: 2500px) {
+    #txt2img_gallery, #img2img_gallery {
+        min-height: 768px;
+    }
+}
+
+#txt2img_gallery img, #img2img_gallery img{
+    object-fit: scale-down;
+}
+
+.justify-center.overflow-x-scroll {
+    justify-content: left;
+}
+
+.justify-center.overflow-x-scroll button:first-of-type {
+    margin-left: auto;
+}
+
+.justify-center.overflow-x-scroll button:last-of-type {
+    margin-right: auto;
+}
+
+#random_seed, #random_subseed, #reuse_seed, #reuse_subseed, #open_folder{
+    min-width: auto;
+    flex-grow: 0;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+#hidden_element{
+    display: none;
+}
+
+#seed_row, #subseed_row{
+    gap: 0.5rem;
+}
+
+#subseed_show_box{
+    min-width: auto;
+    flex-grow: 0;
+}
+
+#subseed_show_box > div{
+    border: 0;
+    height: 100%;
+}
+
+#subseed_show{
+    min-width: auto;
+    flex-grow: 0;
+    padding: 0;
+}
+
+#subseed_show label{
+    height: 100%;
+}
+
+#roll_col{
+    min-width: unset ;
+    flex-grow: 0 ;
+    padding: 0.4em 0;
+}
+
+#roll_col > button {
+    min-width: 2em;
+    min-height: 2em;
+    max-width: 2em;
+    max-height: 2em;
+    flex-grow: 0;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    margin: 0.1em 0;
+}
+
+#interrogate_col{
+    min-width: 0 ;
+    max-width: 8em ;
+}
+#interrogate, #deepbooru{
+    margin: 0em 0.25em 0.9em 0.25em;
+    min-width: 8em;
+    max-width: 8em;
+}
+
+#style_pos_col, #style_neg_col{
+    min-width: 8em ;
+}
+
+#txt2img_style_index, #txt2img_style2_index, #img2img_style_index, #img2img_style2_index{
+    margin-top: 1em;
+}
+
+.gr-form{
+    background: transparent;
+}
+
+.my-4{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#toprow div{
+    border: none;
+    gap: 0;
+    background: transparent;
+}
+
+#resize_mode{
+    flex: 1.5;
+}
+
+button{
+    align-self: stretch ;
+}
+
+.overflow-hidden, .gr-panel{
+    overflow: visible ;
+}
+
+#x_type, #y_type{
+    max-width: 10em;
+}
+
+#txt2img_preview, #img2img_preview, #ti_preview{
+    position: absolute;
+    width: 320px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 34px;
+    z-index: 100;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #txt2img_preview, #img2img_preview, #ti_preview {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #txt2img_preview, #img2img_preview, #ti_preview {
+        position: relative;
+    }
+}
+
+#txt2img_preview div.left-0.top-0, #img2img_preview div.left-0.top-0, #ti_preview div.left-0.top-0{
+    display: none;
+}
+
+
+#settings fieldset span.text-gray-500, #settings .gr-block.gr-box span.text-gray-500, #settings label.block span{
+    position: relative;
+    border: none;
+    margin-right: 8em;
+}
+
+.gr-panel div.flex-col div.justify-between label span{
+    margin: 0;
+}
+
+#settings .gr-panel div.flex-col div.justify-between div{
+    position: relative;
+    z-index: 200;
+}
+
+input[type="range"]{
+    margin: 0.5em 0 -0.3em 0;
+}
+
+#txt2img_sampling label{
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+}
+
+#mask_bug_info {
+  text-align: center;
+  display: block;
+  margin-top: -0.75em;
+  margin-bottom: -0.75em;
+}
+
+#txt2img_negative_prompt, #img2img_negative_prompt{
+}
+
+/* gradio 3.8 adds opacity to progressbar which makes it blink; disable it here */
+/*
+.transition.opacity-20 {
+  opacity: 1 ;
+}
+
+/* more gradio's garbage cleanup */
+/*
+.min-h-\[4rem\] {
+  min-height: unset ;
+}
+
+/*
+
+#txt2img_progressbar, #img2img_progressbar, #ti_progressbar{
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: block;
+}
+
+#txt2img_progress_row, #img2img_progress_row{
+  margin-bottom: 10px;
+  margin-top: -18px;
+}
+
+.progressDiv{
+  width: 100%;
+  height: 20px;
+  background: #b4c0cc;
+  border-radius: 8px;
+}
+
+.dark .progressDiv{
+  background: #424c5b;
+}
+
+.progressDiv .progress{
+  width: 0%;
+  height: 20px;
+  background: #0060df;
+  color: white;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 0 8px 0 0;
+  text-align: right;
+  border-radius: 8px;
+}
+
+#lightboxModal{
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(20, 20, 20, 0.95);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.modalControls {
+    display: grid;
+    grid-template-columns: 32px 32px 32px 1fr 32px;
+    grid-template-areas: "zoom tile save space close";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    gap: 16px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.modalClose {
+    grid-area: close;
+}
+
+.modalZoom {
+    grid-area: zoom;
+}
+
+.modalSave {
+    grid-area: save;
+}
+
+.modalTileImage {
+    grid-area: tile;
+}
+
+.modalClose, 
+.modalZoom,
+.modalTileImage {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modalSave {
+    color: white;
+    font-size: 28px;
+    margin-top: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modalClose:hover,
+.modalClose:focus,
+.modalSave:hover,
+.modalSave:focus,
+.modalZoom:hover,
+.modalZoom:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modalImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: auto;
+}
+
+.modalImageFullscreen {
+    object-fit: contain;
+    height: 90%;
+}
+
+.modalPrev,
+.modalNext {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.modalNext {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.modalPrev:hover,
+.modalNext:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#imageARPreview{
+    position:absolute;
+    top:0px;
+    left:0px;
+    border:2px solid red;
+    background:rgba(255, 0, 0, 0.3);
+    z-index: 900;
+    pointer-events:none;
+    display:none
+}
+
+#txt2img_interrupt, #img2img_interrupt{
+  position: absolute;
+  width: 50%;
+  height: 72px;
+  background: #b4c0cc;
+  border-radius: 0px;
+  display: none;
+}
+
+#txt2img_skip, #img2img_skip{
+  position: absolute;
+  width: 50%;
+  right: 0px;
+  height: 72px;
+  background: #b4c0cc;
+  border-radius: 0px;
+  display: none;
+}
+
+.red {
+	color: red;
+}
+
+.gallery-item {
+    --tw-bg-opacity: 0 ;
+}
+
+#context-menu{
+    z-index:9999;
+    position:absolute;
+    display:block;
+    padding:0px 0;
+    border:2px solid #a55000;
+    border-radius:8px;
+    box-shadow:1px 1px 2px #CE6400;
+    width: 200px;
+}
+
+.context-menu-items{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.context-menu-items a{
+    display:block;
+    padding:5px;
+    cursor:pointer;
+}
+
+.context-menu-items a:hover{
+    background: #a55000;
+}
+
+#quicksettings {
+    gap: 0.4em;
+}
+
+#quicksettings > div{
+    border: none;
+    background: none;
+    flex: unset;
+    gap: 0.5em;
+}
+
+#quicksettings > div > div{
+    max-width: 32em;
+    min-width: 24em;
+    padding: 0;
+}
+
+#refresh_sd_model_checkpoint, #refresh_sd_vae, #refresh_sd_hypernetwork, #refresh_train_hypernetwork_name, #refresh_train_embedding_name, #refresh_localization{
+    max-width: 2.5em;
+    min-width: 2.5em;
+    height: 2.4em;
+}
+
+
+canvas[key="mask"] {
+    z-index: 12 ;
+    filter: invert();
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+/*
+#quicksettings .gr-box > div > div > input.gr-text-input {
+  top: -1.12em;
+}
+
+.row.gr-compact{
+    overflow: visible;
+}
+
+#img2img_image, #img2img_image > .h-60, #img2img_image > .h-60 > div, #img2img_image > .h-60 > div > img,
+img2maskimg, #img2maskimg > .h-60, #img2maskimg > .h-60 > div, #img2maskimg > .h-60 > div > img
+{
+    height: 480px ;
+    max-height: 480px ;
+    min-height: 480px ;
+}
+
+/* Extensions */
+/*
+#tab_extensions table{
+    border-collapse: collapse;
+}
+
+#tab_extensions table td, #tab_extensions table th{
+    border: 1px solid #ccc;
+    padding: 0.25em 0.5em;
+}
+
+#tab_extensions table input[type="checkbox"]{
+    margin-right: 0.5em;
+}
+
+#tab_extensions button{
+    max-width: 16em;
+}
+
+#tab_extensions input[disabled="disabled"]{
+    opacity: 0.5;
+}
+
+.extension-tag{
+    font-weight: bold;
+    font-size: 95%;
+}
+
+/* The following handles localization for right-to-left (RTL) languages like Arabic.
+The rtl media type will only be activated by the logic in javascript/localization.js.
+If you change anything above, you need to make sure it is RTL compliant by just running
+your changes through converters like https://cssjanus.github.io/ or https://rtlcss.com/.
+Then, you will need to add the RTL counterpart only if needed in the rtl section below.*/
+
+/*
+@media rtl {
+    /* this part was added manually */
+
+    /*
+    :host {
+        direction: rtl;
+    }
+    select, .file-preview, .gr-text-input, .output-html:has(.performance), #ti_progress {
+        direction: ltr;
+    }
+    #script_list > label > select,
+    #x_type > label > select,
+    #y_type > label > select {
+        direction: rtl;
+    }
+    .gr-radio, .gr-checkbox{
+        margin-left: 0.25em;
+    }
+
+    /* automatically generated with few manual modifications */
+    /*
+    .performance .time {
+        margin-right: unset;
+        margin-left: 0;
+    }
+    .justify-center.overflow-x-scroll {
+        justify-content: right;
+    }
+    .justify-center.overflow-x-scroll button:first-of-type {
+        margin-left: unset;
+        margin-right: auto;
+    }
+    .justify-center.overflow-x-scroll button:last-of-type {
+        margin-right: unset;
+        margin-left: auto;
+    }
+    #settings fieldset span.text-gray-500, #settings .gr-block.gr-box span.text-gray-500, #settings label.block span{
+        margin-right: unset;
+        margin-left: 8em;
+    }
+    #txt2img_progressbar, #img2img_progressbar, #ti_progressbar{
+        right: unset;
+        left: 0;
+    }
+    .progressDiv .progress{
+        padding: 0 0 0 8px;
+        text-align: left;
+    }
+    #lightboxModal{
+        left: unset;
+        right: 0;
+    }
+    .modalPrev, .modalNext{
+        border-radius: 3px 0 0 3px;
+    }
+    .modalNext {
+        right: unset;
+        left: 0;
+        border-radius: 0 3px 3px 0;
+    }
+    #imageARPreview{
+        left:unset;
+        right:0px;
+    }
+    #txt2img_skip, #img2img_skip{
+        right: unset;
+        left: 0px;
+    }
+    #context-menu{
+        box-shadow:-1px 1px 2px #CE6400;
+    }
+    .gr-box > div > div > input.gr-text-input{
+        right: unset;
+        left: 0.5em;
+    }
+}
+

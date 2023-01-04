@@ -6,31 +6,13 @@
 
 ![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
 
-
-
-
-# **Compatible with sd-web-ui-quickcss Extension**
-
-How to use with the extension:
-
-Just clone this repository to the sd-web-ui-quickcss extension root folder.
-#
-**For more information regarding the extension, please visit this repository:**
-
-https://github.com/Gerschel/sd-web-ui-quickcss
-
-**Thank you very much [Gerschel](https://github.com/Gerschel)**
-
----
-
-Old method - Not using [Gerschel](https://github.com/Gerschel) sd-web-ui-quickcss Extension:
----
-**Custom Dark theme for Stable Diffusion WebUI** 
-
+<h3 align="left">
 What you can get with this?
+
 
 - Changes the dark theme color scheme of your Stable Diffusion WebUI 
 - Purely aesthetic changes
+
 
 ```
 - Color Scheme: Use predefined styles or Make your own
@@ -58,6 +40,24 @@ What you can get with this?
 <p align="center">
 <img src="https://user-images.githubusercontent.com/18109442/210559563-697f64de-502c-4529-a475-5f7414294d40.png" width="75%">
 
+
+
+# **Compatible with sd-web-ui-quickcss Extension**
+
+How to use with the extension:
+
+Just clone this repository to the sd-web-ui-quickcss extension root folder.
+#
+**For more information regarding the extension, please visit this repository:**
+
+https://github.com/Gerschel/sd-web-ui-quickcss
+
+**Thank you very much [Gerschel](https://github.com/Gerschel)**
+
+---
+
+Old method - Not using [Gerschel](https://github.com/Gerschel) sd-web-ui-quickcss Extension:
+---
 
 # **How to install**
 

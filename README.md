@@ -186,35 +186,10 @@ to these ones (and put the files on the WebUI root folder):
 
 Done.
 
----
-<h4 align="center">
-
-![rainbow-rainbow-bar](https://user-images.githubusercontent.com/18109442/210574757-262e24d2-3ab7-4fa5-bf64-935187bb5c6f.gif)
-
-<h4 align="left">
-
-TO DO:
-
-> - Change the dropdown menu selection color from blue to a new one (it seems that this is handled by the OS and not the browser)
-> - Change the Gradio logo animation with this one:
-
-Logo Animation:
-
-<img src="https://user-images.githubusercontent.com/36368048/198925174-eb2f8647-50f1-4a31-8f6f-c32b3e78b3d5.png" width="10%">
-
-
-Anyone knows how to do anything from the TO DO list? 😉 
-
-Done:
-
-> - ~~Change the font from the user.css file~~ 
-> - ~~Change Sliders color from blue to a new one~~
-
----
 
 <h4 align="center">
 
-![rainbow-rainbow-bar](https://user-images.githubusercontent.com/18109442/210574757-262e24d2-3ab7-4fa5-bf64-935187bb5c6f.gif)
+![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
 
 <h4 align="left">
 
@@ -255,6 +230,26 @@ https://necolas.github.io/normalize.css/
 > - Code cleaned a bit.
 
 ----
+---
+
+TO DO:
+
+> - Change the dropdown menu selection color from blue to a new one (it seems that this is handled by the OS and not the browser)
+> - Change the Gradio logo animation with this one:
+
+Logo Animation:
+
+<img src="https://user-images.githubusercontent.com/36368048/198925174-eb2f8647-50f1-4a31-8f6f-c32b3e78b3d5.png" width="10%">
+
+
+Anyone knows how to do anything from the TO DO list? 😉 
+
+Done:
+
+> - ~~Change the font from the user.css file~~ 
+> - ~~Change Sliders color from blue to a new one~~
+
+---
 
 > - Thanks to @DarkVamprism and @masslevel, this was made using some code from their user.css files posted here on github
 > - Thanks to @ParityError for the Logo 

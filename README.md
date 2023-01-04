@@ -1,5 +1,5 @@
 # Dark-Themes-SD-WebUI-Automatic1111-
-Custom user.css files for Automatic1111 Stable Diffusion WebUI
+Custom user.css files for Automatic1111 Stable Diffusion WebUI - https://github.com/AUTOMATIC1111/stable-diffusion-webui
 #
 **Compatible with sd-web-ui-quickcss Extension**
 

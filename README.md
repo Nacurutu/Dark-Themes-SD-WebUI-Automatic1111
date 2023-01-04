@@ -242,10 +242,10 @@ https://necolas.github.io/normalize.css/
 
 ----
 
-> - Thanks to @DarkVamprism, this was made using code from his user.css file posted here on github,
+> - Thanks to @DarkVamprism and @masslevel, this was made using some code from their user.css files posted here on github
 > - Thanks to @ParityError for the Logo 
 > - Thanks to @ParityError for the Logo Animation inspired by @Ladypoly
-> - Thanks to @masslevel for inspiring this theme color scheme, 
+> - Thanks to @masslevel for inspiring the Neon color palette 
 > - Thanks to all the comunity
 > - Thanks to @Gerschel for the extension. 
 > and

@@ -255,7 +255,7 @@ Done:
 > - Thanks to @ParityError for the Logo 
 > - Thanks to @ParityError for the Logo Animation inspired by @Ladypoly
 > - Thanks to @masslevel for inspiring the Neon color palette 
-> - Thanks to all the comunity
+> - Thanks to all the community
 > - Thanks to @Gerschel for the extension. 
 > and
 > - Special thanks to Automatic1111 and team members for this great UI.

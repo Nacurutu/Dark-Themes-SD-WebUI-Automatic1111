@@ -1,7 +1,51 @@
-# Dark-Themes-SD-WebUI-Automatic1111-
-Custom user.css files for Automatic1111 Stable Diffusion WebUI - https://github.com/AUTOMATIC1111/stable-diffusion-webui
-#
-**Compatible with sd-web-ui-quickcss Extension**
+<h3 align="center">
+	<img src="https://user-images.githubusercontent.com/36368048/196555507-ca0df84e-5fe3-4dbf-9a72-11e8081f16bb.svg" width="100" alt="Logo"/><br/>
+	<img src="https://user-images.githubusercontent.com/18109442/210565532-ae64cfbb-b199-48ed-b8f8-036e01a53285.png" height="30" width="0px"/>
+	Dark Themes for <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Stable Diffusion Web UI</a>
+	<img src="https://user-images.githubusercontent.com/18109442/210565532-ae64cfbb-b199-48ed-b8f8-036e01a53285.png" height="30" width="0px"/>
+
+	
+![rainbow-rainbow-bar](https://user-images.githubusercontent.com/18109442/210574757-262e24d2-3ab7-4fa5-bf64-935187bb5c6f.gif)
+		
+
+<h4 align="left">
+What you can get with this?
+
+
+- Changes the dark theme color scheme of your Stable Diffusion WebUI 
+- Purely aesthetic changes
+
+
+
+```
+- Color Scheme: Use predefined styles or Make your own
+- Stable Diffusion WebUI Logo
+- Stable Diffusion WebUI favicon
+- Button backgounds change on Hover
+- Button animations on hover
+- Focus last interaction
+- "Source code pro" text font on inputs
+- Change sliders colors
+```
+
+<h3 align="center">
+-- Custom Dark theme examples for Stable Diffusion WebUI --
+
+
+
+**Alani.css**
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/18109442/210555304-91405012-d81a-4a42-b9e6-5b20ce9826aa.png" width="75%">
+
+**Neon.css**
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/18109442/210559563-697f64de-502c-4529-a475-5f7414294d40.png" width="75%">
+
+
+
+# **Compatible with sd-web-ui-quickcss Extension**
 
 How to use with the extension:
 
@@ -17,36 +61,8 @@ https://github.com/Gerschel/sd-web-ui-quickcss
 
 Old method - Not using [Gerschel](https://github.com/Gerschel) sd-web-ui-quickcss Extension:
 ---
-**Custom Dark theme for Stable Diffusion WebUI** 
 
-What you can get with this?
-
-- Changes the dark theme color scheme of your Stable Diffusion WebUI 
-- Purely aesthetic changes
-
-```
-- Color Scheme: Use predefined styles or Make your own
-- Stable Diffusion WebUI Logo
-- Stable Diffusion WebUI favicon
-- Button backgounds change on Hover
-- Button animations on hover
-- Focus last interaction
-- "Source code pro" text font on inputs
-- Change sliders colors
-```
--- Custom Dark theme example for Stable Diffusion WebUI screenshot --
-
-**Alani.css**
-
-<img src="https://user-images.githubusercontent.com/18109442/210555304-91405012-d81a-4a42-b9e6-5b20ce9826aa.png" width="75%">
-
-**Neon.css**
-
-<img src="https://user-images.githubusercontent.com/18109442/210559563-697f64de-502c-4529-a475-5f7414294d40.png" width="75%">
-
-
-
-**How to install**
+# **How to install**
 
 Steps:
 
@@ -138,12 +154,12 @@ Change the color variables on the user.css for the ones you want.
 
 The Variables you need to change on the user.css file are:
 
->  --Primary_color: #------;
->  --Secondary_color: #------;
->  --Input_text_color: #------;
->  --Input_text_color_focus: #------;
->  --App_color: #------;
->  --Background_color------: 
+-  --Primary_color: #------;
+-  --Secondary_color: #------;
+-  --Input_text_color: #------;
+-  --Input_text_color_focus: #------;
+-  --App_color: #------;
+-  --Background_color #------: 
 
 
 You can use HEX or RGB values. (HEX to be compatible with the Extension)
@@ -170,25 +186,12 @@ to these ones (and put the files on the WebUI root folder):
 
 Done.
 
----
 
-TO DO:
+<h4 align="center">
 
-> - Change the dropdown menu selection color from blue to a new one (it seems that this is handled by the OS and not the browser)
-> - Change the Gradio logo animation with this one:
+![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
 
-Logo Animation:
-<img src="https://user-images.githubusercontent.com/36368048/198925174-eb2f8647-50f1-4a31-8f6f-c32b3e78b3d5.png" width="10%">
-
-
-Anyone knows how to do anything from the TO DO list? 😉 
-
-Done:
-
-> - ~~Change the font from the user.css file~~ 
-> - ~~Change Sliders color from blue to a new one~~
-
----
+<h4 align="left">
 
 > UPDATE -- 12/19/2022 - alpha-v1.01
 > 
@@ -227,12 +230,32 @@ https://necolas.github.io/normalize.css/
 > - Code cleaned a bit.
 
 ----
+---
 
-> - Thanks to @DarkVamprism, this was made using code from his user.css file posted here on github,
+TO DO:
+
+> - Change the dropdown menu selection color from blue to a new one (it seems that this is handled by the OS and not the browser)
+> - Change the Gradio logo animation with this one:
+
+Logo Animation:
+
+<img src="https://user-images.githubusercontent.com/36368048/198925174-eb2f8647-50f1-4a31-8f6f-c32b3e78b3d5.png" width="10%">
+
+
+Anyone knows how to do anything from the TO DO list? 😉 
+
+Done:
+
+> - ~~Change the font from the user.css file~~ 
+> - ~~Change Sliders color from blue to a new one~~
+
+---
+
+> - Thanks to @DarkVamprism and @masslevel, this was made using some code from their user.css files posted here on github
 > - Thanks to @ParityError for the Logo 
 > - Thanks to @ParityError for the Logo Animation inspired by @Ladypoly
-> - Thanks to @masslevel for inspiring this theme color scheme, 
-> - Thanks to all the comunity
+> - Thanks to @masslevel for inspiring the Neon color palette 
+> - Thanks to all the community
 > - Thanks to @Gerschel for the extension. 
 > and
 > - Special thanks to Automatic1111 and team members for this great UI.
@@ -241,3 +264,14 @@ https://necolas.github.io/normalize.css/
 
 > Disclaimer: 
 > I dont know anything about CSS or coding, so, this is a janky alpha version of a CSS file made by try and error that we can use to simulate a dark mode on the Stable Diffusion WebUI.
+
+
+<h4 align="center">
+
+![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
+
+
+<h4 align="center">
+<img src="https://user-images.githubusercontent.com/18109442/210567328-412e1903-5126-4ebf-a3cc-1c58a2fc30f6.png" width="100" alt="Logo"/><br/>
+	
+

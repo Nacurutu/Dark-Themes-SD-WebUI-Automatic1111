@@ -1,7 +1,15 @@
-# Dark-Themes-SD-WebUI-Automatic1111-
-Custom user.css files for Automatic1111 Stable Diffusion WebUI - https://github.com/AUTOMATIC1111/stable-diffusion-webui
-#
-**Compatible with sd-web-ui-quickcss Extension**
+<h3 align="center">
+	<img src="https://user-images.githubusercontent.com/36368048/196555507-ca0df84e-5fe3-4dbf-9a72-11e8081f16bb.svg" width="100" alt="Logo"/><br/>
+	<img src="https://user-images.githubusercontent.com/18109442/210565532-ae64cfbb-b199-48ed-b8f8-036e01a53285.png" height="30" width="0px"/>
+	Dark Themes for <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Stable Diffusion Web UI</a>
+	<img src="https://user-images.githubusercontent.com/18109442/210565532-ae64cfbb-b199-48ed-b8f8-036e01a53285.png" height="30" width="0px"/>
+
+![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
+
+
+
+
+# **Compatible with sd-web-ui-quickcss Extension**
 
 How to use with the extension:
 
@@ -34,19 +42,24 @@ What you can get with this?
 - "Source code pro" text font on inputs
 - Change sliders colors
 ```
--- Custom Dark theme example for Stable Diffusion WebUI screenshot --
+
+<h3 align="center">
+-- Custom Dark theme examples for Stable Diffusion WebUI screenshot --
+
+
 
 **Alani.css**
 
+<p align="center">
 <img src="https://user-images.githubusercontent.com/18109442/210555304-91405012-d81a-4a42-b9e6-5b20ce9826aa.png" width="75%">
 
 **Neon.css**
 
+<p align="center">
 <img src="https://user-images.githubusercontent.com/18109442/210559563-697f64de-502c-4529-a475-5f7414294d40.png" width="75%">
 
 
-
-**How to install**
+# **How to install**
 
 Steps:
 
@@ -138,12 +151,12 @@ Change the color variables on the user.css for the ones you want.
 
 The Variables you need to change on the user.css file are:
 
->  --Primary_color: #------;
->  --Secondary_color: #------;
->  --Input_text_color: #------;
->  --Input_text_color_focus: #------;
->  --App_color: #------;
->  --Background_color------: 
+-  --Primary_color: #------;
+-  --Secondary_color: #------;
+-  --Input_text_color: #------;
+-  --Input_text_color_focus: #------;
+-  --App_color: #------;
+-  --Background_color #------: 
 
 
 You can use HEX or RGB values. (HEX to be compatible with the Extension)
@@ -178,6 +191,7 @@ TO DO:
 > - Change the Gradio logo animation with this one:
 
 Logo Animation:
+
 <img src="https://user-images.githubusercontent.com/36368048/198925174-eb2f8647-50f1-4a31-8f6f-c32b3e78b3d5.png" width="10%">
 
 
@@ -241,3 +255,11 @@ https://necolas.github.io/normalize.css/
 
 > Disclaimer: 
 > I dont know anything about CSS or coding, so, this is a janky alpha version of a CSS file made by try and error that we can use to simulate a dark mode on the Stable Diffusion WebUI.
+
+
+
+
+<h3 align="center">
+	<img src="https://user-images.githubusercontent.com/18109442/210567328-412e1903-5126-4ebf-a3cc-1c58a2fc30f6.png" width="100" alt="Logo"/><br/>
+	
+![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)

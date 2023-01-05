@@ -52,7 +52,7 @@ input[type=color] {
   src: url('SourceCodePro-Regular.otf') ;
 }
 
-/*Css hide Gradio animations*/
+/*Css hide Gradio text, progress bar and animations*/
 /*----------------------------------------------------------------*/
 
 * .wrap.m-12, 
@@ -67,11 +67,7 @@ input[type=color] {
 } 
 
 
-#quicksettings .wrap.svelte-1w9161c {
-  inset: 100%;
-} 
-
-/*Css show Gradio bar until load on SD models selector*/
+/*Css show Gradio bar and loading text until load on SD models selector*/
 /*----------------------------------------------------------------*/
 #setting_sd_model_checkpoint .wrap.svelte-1w9161c {
   inset: 0 ;
@@ -173,27 +169,24 @@ input[type=color] {
     
 }
 
+#img2img_image, 
+#img2img_image > .h-60, 
+#img2img_image > .h-60 > div, 
+#img2img_image > .h-60 > div > img,
+#img2maskimg, 
+#img2maskimg > .h-60, 
+#img2maskimg > .h-60 > div, 
+#img2maskimg > .h-60 > div > img
 
-#img2img_image, #img2img_image > .h-60, #img2img_image > .h-60 > div, #img2img_image > .h-60 > div > img,
-img2maskimg, #img2maskimg > .h-60, #img2maskimg > .h-60 > div, #img2maskimg > .h-60 > div > img
 {
   background-color: var(--Background_color); 
 }
 
 /* Galleries */
 /*----------------------------------------------------------------*/
-#txt2img_gallery, 
-#img2img_gallery,
-#extras_gallery,
-#depthmap_gallery,
-#ti_gallery,
-#sp_gallery,
-#txt2img_images_history_gallery,
-#img2img_images_history_gallery,
-#txt2img-grids_images_history_gallery,
-#img2img-grids_images_history_gallery,
-#Extras_images_history_gallery, 
-#Favorites_images_history_gallery {
+
+[id$="_gallery"].gr-block.gr-box {
+
   border-radius: calc(0.25px *var(--UI_radius)) !important;
   background-image: var(--logo) !important;
   background: none;
@@ -202,7 +195,11 @@ img2maskimg, #img2maskimg > .h-60, #img2maskimg > .h-60 > div, #img2maskimg > .h
   background-repeat: no-repeat ;
   transition: all 1s ease-in-out ;
   box-shadow: 0 0 0 0.2em transparent;
-} 
+}
+
+[id$="_gallery"] svg{
+  display: none ;
+}
 
 #txt2img_gallery:hover,
 #img2img_gallery:hover,
@@ -225,28 +222,26 @@ img2maskimg, #img2maskimg > .h-60, #img2maskimg > .h-60 > div, #img2maskimg > .h
   100% {border-color: var(--Input_text_color_focus);}    
 }
 
-#txt2img_gallery svg, 
-#img2img_gallery svg,
-#extras_gallery svg,
-#depthmap_gallery svg,
-#ti_gallery svg,
-#sp_gallery svg,
-#txt2img_images_history_gallery svg,
-#img2img_images_history_gallery svg,
-#txt2img-grids_images_history_gallery svg,
-#img2img-grids_images_history_gallery svg,
-#Extras_images_history_gallery svg, 
-#Favorites_images_history_gallery svg {
-  display: none ;
-}
-
 .dark .gr-input-label, 
 .dark .gr-button {
   background-image:  none ;
   transition: all 0.3s ease-in-out ;
 }
 
+/* Gallery items*/
+/*----------------------------------------------------------------*/
+#gallery_item {
+  border-width: 2px ;
+}
 
+.dark .gallery-item.svelte-1g9btlg.svelte-1g9btlg {
+  --tw-ring-color: var(--Primary_color) !important;
+}
+
+.dark .dark\:bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: var(--Background_color) ;
+}
 
 /* Checks */
 /*----------------------------------------------------------------*/
@@ -332,7 +327,8 @@ color: var(--Primary_color);
   transition: all 0.3s ease-in-out ;
 }
 
-.dark .gr-button-secondary, .dark .gr-button-tool {
+.dark .gr-button-secondary, 
+.dark .gr-button-tool {
   font-family: 'Source Code Pro', monospace ;
   font: 'Source Code Pro' ;
   border-color: var(--Secondary_color) ;
@@ -345,12 +341,14 @@ color: var(--Primary_color);
 /*----------------------------------------------------------------*/
 
 /*Generate*/
-#txt2img_generate:hover, #img2img_generate:hover {
+#txt2img_generate:hover, 
+#img2img_generate:hover {
   letter-spacing: 1rem;
   box-shadow: 0 0 0 2em transparent;
 } 
 
-#txt2img_generate:active, #img2img_generate:active {
+#txt2img_generate:active, 
+#img2img_generate:active {
   animation: pulse 0.3s;
   -webkit-animation: pulse 0.3s; 
   -moz-animation: pulse 0.3s;
@@ -359,6 +357,7 @@ color: var(--Primary_color);
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 var(--Primary_color) }
 }   
+
 /*Primary*/
 .dark .gr-button-primary:hover,
 #modelmerger_merge:hover, 
@@ -378,7 +377,8 @@ color: var(--Primary_color);
 }  
 
 /*Secondary*/
-.dark .gr-button-secondary:hover, .dark .gr-button-tool:hover {
+.dark .gr-button-secondary:hover, 
+.dark .gr-button-tool:hover {
   border-color: var(--Input_text_color_focus);
   border-width: 1px ;
   background-color: var(--Secondary_color);
@@ -392,37 +392,6 @@ color: var(--Primary_color);
   
   @keyframes pulse2 {
     0% { box-shadow: 0 0 0 0 var(--Input_text_color_focus); }
-}
-
-/* gradio 3.4.1 stuff for editable scrollbar values */
-/*----------------------------------------------------------------*/
-.dark .gr-box > div > div > input.gr-text-input{
-  position: absolute ;
-  right: 0.5em ;
-  top: -0.6em ;
-  z-index: 200 ;
-  width: 8em ;
-  border-color: var(--Secondary_color) ;
-}
-
-.dark .gr-box > div > div > input.gr-text-input:hover, 
-.dark .gr-box > div > div > input.gr-text-input:focus {
-  border-color: var(--Input_text_color_focus) ;
-}
-
-/* Gallery */
-/*----------------------------------------------------------------*/
-#gallery_item {
-  border-width: 2px ;
-}
-
-.dark .gallery-item.svelte-1g9btlg.svelte-1g9btlg {
-  --tw-ring-color: var(--Primary_color) !important;
-}
-
-.dark .dark\:bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: var(--Background_color) ;
 }
 
 /* Context menu */
@@ -445,6 +414,22 @@ color: var(--Primary_color);
 
 }
 
+/* gradio 3.4.1 stuff for editable scrollbar values */
+/*----------------------------------------------------------------*/
+.dark .gr-box > div > div > input.gr-text-input{
+  position: absolute ;
+  right: 0.5em ;
+  top: -0.6em ;
+  z-index: 200 ;
+  width: 8em ;
+  border-color: var(--Secondary_color) ;
+}
+
+.dark .gr-box > div > div > input.gr-text-input:hover, 
+.dark .gr-box > div > div > input.gr-text-input:focus {
+  border-color: var(--Input_text_color_focus) ;
+}
+
 /* Quicksettings Range*/
 /*----------------------------------------------------------------*/
 #quicksettings [id^="setting_"] {
@@ -457,8 +442,6 @@ color: var(--Primary_color);
   row-gap: 1.1ch;
   padding: 1.1em;
 }
-
-
 
 /*-------------------------------------*/
 /*---------------Sliders-------------- */
@@ -557,12 +540,9 @@ color: var(--Primary_color);
 }
 
 
-
-
 /*----------------------------------------------------------------*/
 /* End of changes */
 /*----------------------------------------------------------------*/
-
 
 
 /*----------------------------------------------------------------*/
@@ -928,7 +908,7 @@ template {
 /*----------------------------------------------------------------*/
 
 /* To get the favicon working, 
-add this to webui.py besides prevent_thread_lock=True,
+add this to webui.py besides prevent_thread_lock=True, ->
 
 favicon_path="favicon.svg",
 

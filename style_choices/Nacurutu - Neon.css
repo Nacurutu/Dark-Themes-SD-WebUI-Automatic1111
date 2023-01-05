@@ -54,18 +54,28 @@ input[type=color] {
 
 /*Css hide Gradio animations*/
 /*----------------------------------------------------------------*/
-/* Trying to hide Gradio progress bar here, but still cant figure out how */
-/*----------------------------------------------------------------*/
 
 * .wrap .m-12, 
 * .wrap .z-20,
 * .meta-text-center, 
 * .meta-text,
 * .wrap .m-12 svg, 
-* .wrap .z-20 svg {
+* .wrap .z-20 svg,
+* .wrap svelte-1w9161c {
   display:none ;
+  inset: 100%;
 } 
-  
+
+#quicksettings .wrap.svelte-1w9161c {
+  inset: 100%;
+} 
+
+/*Css show Gradio bar until load on SD models selector*/
+/*----------------------------------------------------------------*/
+#setting_sd_model_checkpoint .wrap.svelte-1w9161c {
+  inset: 0 ;
+} 
+
 /* gradio 3.8 adds opacity to progressbar which makes it blink; disable it here */
 
 .dark .transition.opacity-20 {
@@ -155,7 +165,8 @@ input[type=color] {
 .dark fieldset span.text-gray-500, 
 .dark .gr-block.gr-box span.text-gray-500,
 .dark label.block span {
-  background-color: var(--Background_color) ;
+  background-color: var(--Background_color);
+    
 }
 
 
@@ -430,14 +441,17 @@ color: var(--Primary_color);
 
 }
 
-/* Quicksettings */
+/* Quicksettings Range*/
 /*----------------------------------------------------------------*/
-#setting_sd_hypernetwork_strength, 
-#setting_CLIP_stop_at_last_layers, 
-#setting_inpainting_mask_weight {
+#quicksettings [id^="setting_"] {
   display: grid ;
-  row-gap: 1em ;
-        
+}
+
+/* Gr-block gap and padding */
+/*----------------------------------------------------------------*/
+.gr-block.gr-box {
+  row-gap: 1.1ch;
+  padding: 1.1em;
 }
 
 /*-------------------------------------*/

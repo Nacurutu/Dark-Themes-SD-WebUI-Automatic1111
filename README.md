@@ -43,8 +43,7 @@ While pressing the Refresh button on your browser’s address bar will only do a
 <h3 align="center">
 -- Custom Dark theme examples for Stable Diffusion WebUI --
 
-
-
+#
 **Alani.css**
 
 <p align="center">

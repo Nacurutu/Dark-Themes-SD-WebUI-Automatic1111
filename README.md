@@ -17,7 +17,7 @@
 
 #
 <h2 align="left">
-What you can get with this?
+What can you get with this?
 
 #
 - Changes the dark theme color scheme of your Stable Diffusion WebUI 

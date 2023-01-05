@@ -69,11 +69,14 @@ Steps:
 - Activate dark mode on the webui-user.bat ->
 set COMMANDLINE_ARGS= --theme=dark
 
-- Download and Save the user.css in your Stable Diffusion WebUI's root folder or on \extensions\sd-web-ui-quickcss\style_choices if you are going to use the extension.
+- Download and Save one of the .css files from the repo (style_choices folder) into your Stable Diffusion WebUI's root folder 
 
-   user.css -> https://pastebin.com/frSUF2xN  -_UPDATED -- 01/05/2023_-
+- Rename the file to user.css on your SD root folder
 
-- Click on the next image (should open in a new tab)
+
+or on \extensions\sd-web-ui-quickcss\style_choices if you are going to use the extension (do not need to rename the file names).
+
+  - Click on the next image (should open in a new tab)
 
 <img src="https://user-images.githubusercontent.com/18109442/208246354-e80714ab-71e9-48dd-a233-7012bf87335f.png" width="40%">
 
@@ -146,8 +149,8 @@ Change the color variables on the user.css for the ones you want.
     /*ENDCOLORPICKERS*/
     --UI_radius: 0;
     /*BREAKFILEREADER*/ 
-    --logo: url('file=extensions/sd-web-ui-quickcss/logos/logo.png');
-    --favicon: url('file=extensions/sd-web-ui-quickcss/favicons/favicon.svg');
+    --logo: url('file=logo.png');
+    --favicon: url('file=favicon.svg');
  
 }
 ```
@@ -163,26 +166,6 @@ The Variables you need to change on the user.css file are:
 
 
 You can use HEX or RGB values. (HEX to be compatible with the Extension)
-
-Note:
-Logo and Favicon on Extension folder.
-If you are not going to use the extension, change these values:
-
-
-```
-  /*BREAKFILEREADER*/ 
-    --logo: url('file=extensions/sd-web-ui-quickcss/logos/logo.png');
-    --favicon: url('file=extensions/sd-web-ui-quickcss/favicons/favicon.svg');
-
-```
-to these ones (and put the files on the WebUI root folder):
-
-```
-  /*BREAKFILEREADER*/ 
-    --logo: url('file=logo.png');
-    --favicon: url('file=favicon.svg');
-```
-
 
 Done.
 

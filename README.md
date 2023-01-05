@@ -1,4 +1,4 @@
-<h3 align="center">
+<h1 align="center">
 	<img src="https://user-images.githubusercontent.com/36368048/196555507-ca0df84e-5fe3-4dbf-9a72-11e8081f16bb.svg" width="100" alt="Logo"/><br/>
 	<img src="https://user-images.githubusercontent.com/18109442/210565532-ae64cfbb-b199-48ed-b8f8-036e01a53285.png" height="30" width="0px"/>
 	Dark Themes for <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Stable Diffusion Web UI</a>
@@ -6,9 +6,17 @@
 
 	
 ![rainbow-rainbow-bar](https://user-images.githubusercontent.com/18109442/210574757-262e24d2-3ab7-4fa5-bf64-935187bb5c6f.gif)
-		
+
+<p align="center">
+	<a href="https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111/stargazers"><img src="https://img.shields.io/github/stars/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+	<a href="https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111/issues"><img src="https://img.shields.io/github/issues/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+	<a href="https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111/contributors"><img src="https://img.shields.io/github/contributors/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+</p>
+<br>
+<br>
+
 #
-<h4 align="left">
+<h2 align="left">
 What you can get with this?
 
 #
@@ -35,28 +43,27 @@ If the changes does not apply properly (Style - logo - favicon), refresh your br
 How to refresh your browser cache?
 To force your browser to refresh take the following steps:
 
-**⇧ Shift-click the Refresh button.** 
+> **⇧ Shift-click the Refresh button.** 
 
 While pressing the Refresh button on your browser’s address bar will only do a standard refresh, you can force a refresh from the server by pressing ⇧ Shift and clicking it instead.
+<br>
+<br>
+#
+
+# **Custom Dark theme examples for Stable Diffusion WebUI**
+
+<details>
+<summary>🔶 Alani</summary>
+<img src="https://user-images.githubusercontent.com/18109442/210555304-91405012-d81a-4a42-b9e6-5b20ce9826aa.png"/>
+</details>
+<details>
+<summary>🟣 Neon</summary>
+<img src="https://user-images.githubusercontent.com/18109442/210559563-697f64de-502c-4529-a475-5f7414294d40.png"/>
+</details>
+
 
 #
-<h3 align="center">
--- Custom Dark theme examples for Stable Diffusion WebUI --
-
-#
-**Alani.css**
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/18109442/210555304-91405012-d81a-4a42-b9e6-5b20ce9826aa.png" width="75%">
-
-**Neon.css**
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/18109442/210559563-697f64de-502c-4529-a475-5f7414294d40.png" width="75%">
-
-
-#
-# **Compatible with sd-web-ui-quickcss Extension**
+## **Compatible with sd-web-ui-quickcss Extension**
 
 How to use with the extension:
 
@@ -67,7 +74,8 @@ Just clone this repository to the sd-web-ui-quickcss extension root folder.
 https://github.com/Gerschel/sd-web-ui-quickcss
 
 **Thank you very much [Gerschel](https://github.com/Gerschel)**
-
+<br>
+ <br>
 ---
 
 Old method - Not using [Gerschel](https://github.com/Gerschel) sd-web-ui-quickcss Extension:
@@ -114,7 +122,7 @@ If you want to change the favicon, you will need to do the following steps:
 
 Example:
 
-```
+```java
 app, local_url, share_url = demo.launch(
             share=cmd_opts.share,
             server_name="0.0.0.0" if cmd_opts.listen else None,
@@ -147,7 +155,7 @@ Steps:
 
 Change the color variables on the user.css for the ones you want.
 
-```
+```css
 *THEME VARIABLES*/
 :root, * , quickcss_target{
     
@@ -180,10 +188,10 @@ You can use HEX or RGB values. (HEX to be compatible with the Extension)
 
 Done.
 
+#
 
-<h4 align="center">
-
-![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
+<h2 align="left">
+-- UPDATES --
 
 <h4 align="left">
 
@@ -245,27 +253,32 @@ Done:
 
 ---
 
-> - Thanks to @DarkVamprism and @masslevel, this was made using some code from their user.css files posted here on github
-> - Thanks to @ParityError for the Logo 
-> - Thanks to @ParityError for the Logo Animation inspired by @Ladypoly
-> - Thanks to @masslevel for inspiring the Neon color palette 
-> - Thanks to all the community
-> - Thanks to @Gerschel for the extension. 
-> and
+# 💙 Big Thanks to:
+
+> - @DarkVamprism and @masslevel, this was made using some code from their user.css files posted here on github
+> - @ParityError for the Logo and Logo Animation inspired by @Ladypoly
+> - @masslevel for inspiring the Neon color palette 
+> - All the community
+> - @Gerschel for the extension. 
+
 > - Special thanks to Automatic1111 and team members for this great UI.
-
-:wink:
-
-> Disclaimer: 
+ <br>
+ <br>
+<h3 align="center">
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+ <br>
+ <br>
+ <h4 align="left">
+> Disclaimer:
+<br>
 > I dont know anything about CSS or coding, so, this is a janky alpha version of a CSS file made by try and error that we can use to simulate a dark mode on the Stable Diffusion WebUI.
-
 
 <h4 align="center">
 
 ![945617](https://user-images.githubusercontent.com/18109442/210566056-30b34c73-ed79-48d9-b04f-da781905d709.gif)
 
+#
 
 <h4 align="center">
 <img src="https://user-images.githubusercontent.com/18109442/210567328-412e1903-5126-4ebf-a3cc-1c58a2fc30f6.png" width="100" alt="Logo"/><br/>
 	
-

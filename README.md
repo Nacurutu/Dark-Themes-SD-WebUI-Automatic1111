@@ -7,11 +7,11 @@
 	
 ![rainbow-rainbow-bar](https://user-images.githubusercontent.com/18109442/210574757-262e24d2-3ab7-4fa5-bf64-935187bb5c6f.gif)
 		
-
+#
 <h4 align="left">
 What you can get with this?
 
-
+#
 - Changes the dark theme color scheme of your Stable Diffusion WebUI 
 - Purely aesthetic changes
 
@@ -27,7 +27,19 @@ What you can get with this?
 - "Source code pro" text font on inputs
 - Change sliders colors
 ```
+#
+Important:
 
+If the changes does not apply properly (Style - logo - favicon), refresh your browser cache:
+
+How to refresh your browser cache?
+To force your browser to refresh take the following steps:
+
+**⇧ Shift-click the Refresh button.** 
+
+While pressing the Refresh button on your browser’s address bar will only do a standard refresh, you can force a refresh from the server by pressing ⇧ Shift and clicking it instead.
+
+#
 <h3 align="center">
 -- Custom Dark theme examples for Stable Diffusion WebUI --
 
@@ -44,7 +56,7 @@ What you can get with this?
 <img src="https://user-images.githubusercontent.com/18109442/210559563-697f64de-502c-4529-a475-5f7414294d40.png" width="75%">
 
 
-
+#
 # **Compatible with sd-web-ui-quickcss Extension**
 
 How to use with the extension:

@@ -55,16 +55,17 @@ input[type=color] {
 /*Css hide Gradio animations*/
 /*----------------------------------------------------------------*/
 
-* .wrap .m-12, 
-* .wrap .z-20,
+* .wrap.m-12, 
+* .wrap.z-20,
 * .meta-text-center, 
 * .meta-text,
-* .wrap .m-12 svg, 
-* .wrap .z-20 svg,
-* .wrap svelte-1w9161c {
+* .wrap.m-12 svg, 
+* .wrap.z-20 svg,
+* .wrap.svelte-1w9161c {
   display:none ;
   inset: 100%;
 } 
+
 
 #quicksettings .wrap.svelte-1w9161c {
   inset: 100%;
@@ -74,6 +75,9 @@ input[type=color] {
 /*----------------------------------------------------------------*/
 #setting_sd_model_checkpoint .wrap.svelte-1w9161c {
   inset: 0 ;
+  display: flex;
+  justify-content: center;
+  color: var(--Input_text_color);
 } 
 
 /* gradio 3.8 adds opacity to progressbar which makes it blink; disable it here */
@@ -453,6 +457,8 @@ color: var(--Primary_color);
   row-gap: 1.1ch;
   padding: 1.1em;
 }
+
+
 
 /*-------------------------------------*/
 /*---------------Sliders-------------- */

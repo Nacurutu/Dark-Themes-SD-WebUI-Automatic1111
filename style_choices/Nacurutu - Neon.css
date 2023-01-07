@@ -162,11 +162,15 @@ input[type=color] {
 .dark .gr-button-tool, 
 .dark .dark\:bg-gray-700, 
 .dark .dark\:bg-gray-950,
+.dark .dark\:bg-gray-200,
+.dark .bg-gray-700, 
+.dark .bg-gray-950,
+.dark .bg-gray-200,
 .dark fieldset span.text-gray-500, 
 .dark .gr-block.gr-box span.text-gray-500,
 .dark label.block span {
+
   background-color: var(--Background_color);
-    
 }
 
 #img2img_image, 
@@ -176,9 +180,8 @@ input[type=color] {
 #img2maskimg, 
 #img2maskimg > .h-60, 
 #img2maskimg > .h-60 > div, 
-#img2maskimg > .h-60 > div > img
-
-{
+#img2maskimg > .h-60 > div > img {
+  
   background-color: var(--Background_color); 
 }
 
@@ -287,7 +290,8 @@ color: var(--Primary_color);
   text-transform: uppercase;
   letter-spacing: .2rem;
   font-weight: bold;
-  transition: all 0.3s ease-in-out ;   
+  transition: all 0.3s ease-in-out ; 
+    
 }
 
 #txt2img_interrupt, 

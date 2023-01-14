@@ -35,6 +35,7 @@ What can you get with this?
 - "Source code pro" text font on inputs
 - Change sliders colors
 
+- Prefered Browser's zoom in: 75%
 - Last update breaks img2img tab - Mobile version. (Still working on it)
 ```
 #

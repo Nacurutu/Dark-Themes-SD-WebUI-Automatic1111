@@ -316,7 +316,6 @@ color: var(--Primary_color);
 /* Generate progress bar style */
 /*----------------------------------------------------------------*/
 
-
 .dark .progressDiv{
   width: 100%;
   height: 22px;
@@ -339,6 +338,7 @@ color: var(--Primary_color);
   cursor: progress;
 }
 
+/*Generate progress bar position*/
 #txt2img_progressbar, #img2img_progressbar, #ti_progressbar{
   position: absolute;
   z-index: 1000;
@@ -401,19 +401,19 @@ color: var(--Primary_color);
 /* img2img tabs container fixed width and height */
 
 .dark .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem{
-  max-height:900px !important;
-  min-height: 900px !important;
+  max-height:880px !important;
+  min-height:880px !important;
  
 }
 
 .dark .min-h-screen .mx-auto .overflow-hidden #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem > .overflow-hidden > .overflow-hidden{
-  max-height: 880px !important;
-  min-height: 880px !important;
+  max-height: 860px !important;
+  min-height: 860px !important;
 }
 
 .dark .min-h-screen .mx-auto .overflow-hidden #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem .overflow-hidden .overflow-hidden .h-60 .cursor-pointer{
-  max-height: 860px !important;
-  min-height: 860px !important;
+  max-height: 830px !important;
+  min-height: 830px !important;
 }
 
 .dark .overflow-hidden > .overflow-hidden > .flex-wrap > .overflow-hidden > .flex-col {
@@ -439,6 +439,20 @@ color: var(--Primary_color);
   width: 100% !important;
   height:100% !important;
  }
+
+ /* New img2img buttons reposition and border*/
+
+ #tabs .tabitem .gr-compact{
+  margin-top:18px;
+  z-index: 100;
+ }
+
+ #tabs .gr-compact .gr-button-secondary{
+  border-color:var(--Secondary_color);
+  border-width:0.5px !important;
+ }
+
+
 
 /*----------------------------------------------------------------*/
 /*----------------------------------------------------------------*/

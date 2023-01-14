@@ -64,8 +64,6 @@ While pressing the Refresh button on your browser’s address bar will only do a
 <img src="https://user-images.githubusercontent.com/18109442/212449931-78804c9d-561f-407d-a032-6b58e0ae8bed.png"/>
 <img src="https://user-images.githubusercontent.com/18109442/212449953-bc45cda8-14ac-44d3-93de-af5fc4a2a53b.png"/>
 </details>
-![image](https://user-images.githubusercontent.com/18109442/212449855-2c541016-2754-4a5d-be16-a11bb8e90934.png)
-
 
 #
 ## **Compatible with sd-web-ui-quickcss Extension**

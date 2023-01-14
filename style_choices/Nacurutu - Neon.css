@@ -384,7 +384,7 @@ color: var(--Primary_color);
 #img2img_settings { 
   display: flex; 
   flex-direction: row-reverse;
-  flex-grow: 3;
+  flex-grow: 3 !important;
 }
 
 /* img2img tabs panel no wrap*/

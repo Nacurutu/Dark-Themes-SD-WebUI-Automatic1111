@@ -103,8 +103,7 @@ input[type=color] {
   border-bottom-right-radius: 0px !important;
 }
 
-#tabs > div:first-of-type button:hover
-{
+#tabs > div:first-of-type button:hover {
   border-color: 0 0 0 0.2em var(--Input_text_color_focus) ;
   border-bottom-left-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
@@ -123,8 +122,7 @@ input[type=color] {
 *::selection {
   color: var(--Input_text_color_focus);
       background-color: var(--Secondary_color);
-  
-  }
+}
 
 /* App Colors */
 /*----------------------------------------------------------------*/
@@ -179,7 +177,6 @@ input[type=color] {
 .dark fieldset span.text-gray-500, 
 .dark .gr-block.gr-box span.text-gray-500,
 .dark label.block span {
-
   background-color: var(--Background_color);
 }
 
@@ -205,7 +202,7 @@ background-color: transparent !important;
   box-shadow: 0 0 0 0.2em transparent;
 }
 
-.group {
+.dark .group {
   max-height: 60vh;
 }
 
@@ -249,9 +246,9 @@ background-color: transparent !important;
  }
  
  /* Svg */
- .backdrop-blur .modify-upload svg{
+ .dark .backdrop-blur .modify-upload svg{
   display:block !important;
- }
+}
 
 /* Gallery items*/
 /*----------------------------------------------------------------*/
@@ -289,7 +286,6 @@ background-color: transparent !important;
   height: 550px;
   max-height: 100% !important;
   min-height: 90% !important;
-  
 }
 
 
@@ -298,7 +294,6 @@ background-color: transparent !important;
 /*----------------------------------------------------------------*/
 .dark .gr-check-radio:checked {
   background-color: var(--Primary_color) ;
-  
 }
 
 .dark .gr-input-label:hover {
@@ -345,29 +340,26 @@ color: var(--Primary_color);
 }
 
 #txt2img_progressbar, #img2img_progressbar, #ti_progressbar{
-    position: absolute;
-    z-index: 1000;
-    right: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-    display: block;
-    cursor: progress;
-            
-  }
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: block;
+  cursor: progress;
+}
   
-  #txt2img_progress_row, #img2img_progress_row{
-    margin-bottom: 10px;
-    margin-top: -18px;
-    flex-direction:column;
-    gap: 0;
-    
-            
-  }
+#txt2img_progress_row, #img2img_progress_row{
+  margin-bottom: 10px;
+  margin-top: -18px;
+  flex-direction:column;
+  gap: 0;
+}
 
-  #txt2img_progress_row > div { 
-    min-width: calc(var(--left-column)); 
-    max-width: var(--left-column);
-     }
+ #txt2img_progress_row > div { 
+  min-width: calc(var(--left-column)); 
+  max-width: var(--left-column);
+}
 
  
 /* txt2img generation parameters left panel width */
@@ -376,13 +368,11 @@ color: var(--Primary_color);
 #txt2img_settings { 
   min-width: var(--left-column); 
   max-width: var(--left-column); 
-
 }
 
-.overflow-hidden .flex .flex-col .relative col .gap-4 { 
+.dark .overflow-hidden .flex .flex-col .relative col .gap-4 { 
   min-width: var(--left-column); 
   max-width: var(--left-column); 
-
 }
 
 
@@ -394,8 +384,7 @@ color: var(--Primary_color);
 #img2img_settings { 
   display: flex; 
   flex-direction: row-reverse;
-  flex-grow: 3 !important;
-  
+  flex-grow: 3;
 }
 
 /* img2img tabs panel no wrap*/
@@ -411,28 +400,25 @@ color: var(--Primary_color);
 
 /* img2img tabs container fixed width and height */
 
- .dark .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem{
+.dark .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem{
   max-height:900px !important;
   min-height: 900px !important;
  
- }
+}
 
- .dark .min-h-screen .mx-auto .overflow-hidden #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem > .overflow-hidden > .overflow-hidden{
+.dark .min-h-screen .mx-auto .overflow-hidden #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem > .overflow-hidden > .overflow-hidden{
   max-height: 880px !important;
   min-height: 880px !important;
-  
- }
+}
 
 .dark .min-h-screen .mx-auto .overflow-hidden #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem .overflow-hidden .overflow-hidden .h-60 .cursor-pointer{
   max-height: 860px !important;
   min-height: 860px !important;
-
- }
+}
 
 .dark .overflow-hidden > .overflow-hidden > .flex-wrap > .overflow-hidden > .flex-col {
-
-max-width: 1200px !important;
-min-width: 610px !important;
+  max-width: 1200px !important;
+  min-width: 610px !important;
 }
 
 /* Overflow hidden */
@@ -446,8 +432,6 @@ min-width: 610px !important;
 .dark .min-h-screen .mx-auto .overflow-hidden:nth-child(1) #tabs .tabitem:nth-child(3) .overflow-hidden:nth-child(1) .overflow-hidden:nth-child(3) .flex-wrap:nth-child(1) > .overflow-hidden:nth-child(2) > .overflow-hidden:nth-child(2){
   min-width:430px !important;
  }
- 
-
 
 /* Trying to fix the Resize issue on inpainting tab */
 
@@ -455,7 +439,6 @@ min-width: 610px !important;
   width: 100% !important;
   height:100% !important;
  }
-
 
 /*----------------------------------------------------------------*/
 /*----------------------------------------------------------------*/
@@ -469,7 +452,6 @@ min-width: 610px !important;
   letter-spacing: .2rem;
   font-weight: bold;
   transition: all 0.3s ease-in-out ; 
-    
 }
 
 #txt2img_interrupt, 
@@ -544,8 +526,7 @@ min-width: 610px !important;
 #modelmerger_merge:hover, 
 #deforum_generate:hover, 
 #depthmap_generate:hover, 
-#vxa_gen_btn:hover 
-{
+#vxa_gen_btn:hover {
   border-color: var(--Input_text_color_focus);
   border-width: 4px ;
   background-color: var(--Primary_color) ;
@@ -569,9 +550,8 @@ min-width: 610px !important;
   -webkit-animation: pulse2 0.3s;
   -moz-animation: pulse2 0.3s;
   -o-animation: pulse2 0.3s;
-  }
-  
-  @keyframes pulse2 {
+}
+@keyframes pulse2 {
     0% { box-shadow: 0 0 0 0 var(--Input_text_color_focus); }
 }
 
@@ -643,7 +623,6 @@ min-width: 610px !important;
   border-radius: 3px ;
   background:  var(--App_color) ;
   opacity: 0.6;
-  
 }
 
 .gradio-container input[type=range]:hover::-webkit-slider-runnable-track {
@@ -657,7 +636,6 @@ min-width: 610px !important;
   height: 6px ;
   border-radius: 3px ;
   background:  var(--Primary_color) ;
-  
 }
 
 .gradio-container input[type=range]:hover::-moz-range-track {
@@ -687,7 +665,6 @@ min-width: 610px !important;
   cursor: pointer ;
   -webkit-appearance: none ;
   margin-top: -5px ;
-  
 }
 
 .gradio-container input[type=range]:active::-webkit-slider-thumb {

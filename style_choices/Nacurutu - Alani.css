@@ -2,9 +2,9 @@
 Custom Dark theme for Stable Diffusion WebUI 
 Original Style.css Edit
 
-* @Version: alpha-v1.5
+* @Version: alpha-v1.7
 * @Author: Nacurutu
-* @Last Modified: 2023-01-05
+* @Last Modified: 2023-01-14
 * @Alani
 
 /*----------------------------------------------------------------*/
@@ -22,9 +22,11 @@ Original Style.css Edit
     --Checked_text: #F2910A;
     /*ENDCOLORPICKERS*/
     --UI_radius: 0;
+    --left_pannel_width: 40;
     /*BREAKFILEREADER*/
     --logo: url('file=logo.png');
     --favicon: url('file=favicon.svg');
+    --left-column: calc(20px *var(--left_pannel_width));
 }
 
 /* Quickcss extension */
@@ -45,7 +47,14 @@ input[type=color] {
 /* User.css Changes */
 /*================================================ */
 
-/* Import font */
+/* Gradio app font */
+/*----------------------------------------------------------------*/
+.gradio-container { 
+  font-family: "Segoe UI"; 
+  font-variant: small-caps; 
+  }
+
+/* Import font for inputs */
 /*----------------------------------------------------------------*/
 @font-face {
   font-family: 'Source Code Pro', monospace ;
@@ -67,7 +76,7 @@ input[type=color] {
 } 
 
 
-/*Css show Gradio bar and loading text until load on SD models selector*/
+/*Css show loading text on SD models selector*/
 /*----------------------------------------------------------------*/
 #setting_sd_model_checkpoint .wrap.svelte-1w9161c {
   inset: 0 ;
@@ -86,6 +95,8 @@ input[type=color] {
 /*----------------------------------------------------------------*/
 
 #tabs > div:first-of-type button {
+  font-family: "Segoe UI"; 
+  font-variant: small-caps;
   font-size: 90% ;
   transition: all 0.3s ease-in-out ;
   border-bottom-left-radius: 0px !important;
@@ -123,7 +134,8 @@ input[type=color] {
 .dark .dark\:text-gray-200, 
 .dark .text-gray-700, 
 .dark .text-gray-800, 
-.dark .text-gray-900, 
+.dark .text-gray-900,
+.dark .text-gray-500,  
 .dark .\!text-gray-700, 
 .dark .\!text-gray-800 {
   color: var(--App_color) ;
@@ -162,10 +174,8 @@ input[type=color] {
 .dark .gr-button-tool, 
 .dark .dark\:bg-gray-700, 
 .dark .dark\:bg-gray-950,
-.dark .dark\:bg-gray-200,
 .dark .bg-gray-700, 
 .dark .bg-gray-950,
-.dark .bg-gray-200,
 .dark fieldset span.text-gray-500, 
 .dark .gr-block.gr-box span.text-gray-500,
 .dark label.block span {
@@ -173,17 +183,12 @@ input[type=color] {
   background-color: var(--Background_color);
 }
 
-#img2img_image, 
-#img2img_image > .h-60, 
-#img2img_image > .h-60 > div, 
-#img2img_image > .h-60 > div > img,
-#img2maskimg, 
-#img2maskimg > .h-60, 
-#img2maskimg > .h-60 > div, 
-#img2maskimg > .h-60 > div > img {
-  
-  background-color: var(--Background_color); 
+.dark .dark\:bg-gray-200, 
+.dark .bg-gray-200 {
+background-color: transparent !important;
+
 }
+
 
 /* Galleries */
 /*----------------------------------------------------------------*/
@@ -199,6 +204,11 @@ input[type=color] {
   transition: all 1s ease-in-out ;
   box-shadow: 0 0 0 0.2em transparent;
 }
+
+.group {
+  max-height: 60vh;
+}
+
 
 [id$="_gallery"] svg{
   display: none ;
@@ -246,6 +256,32 @@ input[type=color] {
   background-color: var(--Background_color) ;
 }
 
+/* Gallery items fix */
+/*----------------------------------------------------------------*/
+
+
+#img2img_image, 
+#img2img_image > .h-60, 
+#img2img_image > .h-60 > div, 
+#img2img_image > .h-60 > div > img, 
+#img2img_sketch, 
+#img2img_sketch > .h-60, 
+#img2img_sketch > .h-60 > div, 
+#img2img_sketch > .h-60 > div > img, 
+#img2maskimg, #img2maskimg > .h-60, 
+#img2maskimg > .h-60 > div, 
+#img2maskimg > .h-60 > div > img, 
+#inpaint_sketch, #inpaint_sketch > .h-60, 
+#inpaint_sketch > .h-60 > div, 
+#inpaint_sketch > .h-60 > div > img {
+  height: 550px;
+  max-height: 100% !important;
+  min-height: 90% !important;
+  
+}
+
+
+
 /* Checks */
 /*----------------------------------------------------------------*/
 .dark .gr-check-radio:checked {
@@ -272,22 +308,130 @@ color: var(--Primary_color);
 
 /* Generate progress bar style */
 /*----------------------------------------------------------------*/
+
+
+.dark .progressDiv{
+  width: 100%;
+  height: 22px;
+  background: var(--Background_color);
+  border-color: var(--Secondary_color);
+  border-width: 0.5px;
+  border-radius: calc(0.25px *var(--UI_radius)) !important;
+  cursor: progress;
+}
+
 .dark .progressDiv .progress {
   font-family: 'Source Code Pro', monospace ;
   font: 'Source Code Pro';
   background: var(--Primary_color) ;
   color: var(--Input_text_color_focus);
   font-weight: bold ;
-  line-height: 20px ;
+  line-height: 20px;
   text-align: right ;
   border-radius: calc(0.25px *var(--UI_radius)) !important;
+  cursor: progress;
 }
+
+#txt2img_progressbar, #img2img_progressbar, #ti_progressbar{
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: block;
+    cursor: progress;
+            
+  }
+  
+  #txt2img_progress_row, #img2img_progress_row{
+    margin-bottom: 10px;
+    margin-top: -18px;
+    flex-direction:column;
+    gap: 0;
+    
+            
+  }
+
+  #txt2img_progress_row > div { 
+    min-width: calc(var(--left-column)); 
+    max-width: var(--left-column);
+     }
+
+ 
+/* txt2img generation parameters left panel width */
+/*----------------------------------------------------------------*/
+
+#txt2img_settings { 
+  min-width: var(--left-column); 
+  max-width: var(--left-column); 
+
+}
+
+.overflow-hidden .flex .flex-col .relative col .gap-4 { 
+  min-width: var(--left-column); 
+  max-width: var(--left-column); 
+
+}
+
+
+/*----------------------------------------------------------------*/
+/* img2img tab Layout test (WORK IN PROGRESS) v2
+/*----------------------------------------------------------------*/
+
+/*change parameters tab order / parameters left - tabs center*/
+#img2img_settings { 
+  display: flex; 
+  flex-direction: row-reverse;
+  
+}
+
+/* img2img tabs panel no wrap*/
+.dark .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden > .flex-col > .flex-wrap{
+  flex-wrap:nowrap;
+ }
+
+/* img2img tabs container fixed width and height */
+ .dark .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem{
+  max-height:730px !important;
+  min-height: 730px !important;
+ 
+ }
+
+ .dark .min-h-screen .mx-auto .overflow-hidden #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem > .overflow-hidden > .overflow-hidden{
+  max-height: 710px !important;
+  min-height: 710px !important;
+  
+ }
+
+.dark .min-h-screen .mx-auto .overflow-hidden #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem .overflow-hidden .overflow-hidden .h-60 .cursor-pointer{
+  max-height: 690px !important;
+  min-height: 690px !important;
+
+ }
+
+.dark .overflow-hidden > .overflow-hidden > .flex-wrap > .overflow-hidden > .flex-col {
+
+max-width: 730px !important;
+min-width: 730px !important;
+}
+
+/* Trying to fix the Resize issue on inpainting tab */
+
+.dark #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem .overflow-hidden .overflow-hidden .h-60 .cursor-pointer .h-full .hover\:cursor-none{
+  width: 100% !important;
+  height:100% !important;
+ }
+
+
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+
 
 /* Buttons */
 /*----------------------------------------------------------------*/
 #txt2img_generate, 
 #img2img_generate {
-  text-transform: uppercase;
   letter-spacing: .2rem;
   font-weight: bold;
   transition: all 0.3s ease-in-out ; 
@@ -317,9 +461,8 @@ color: var(--Primary_color);
 #deforum_generate, 
 #depthmap_generate, 
 #vxa_gen_btn {
-  font-family: 'Source Code Pro', monospace ;
-  font: 'Source Code Pro' ;
-  text-transform: uppercase;
+  font-family: "Segoe UI"; 
+  font-variant: small-caps; 
   border-color: var(--Primary_color) ;
   border-width: 4px ;
   background-image: var(--logo) ;
@@ -333,8 +476,8 @@ color: var(--Primary_color);
 
 .dark .gr-button-secondary, 
 .dark .gr-button-tool {
-  font-family: 'Source Code Pro', monospace ;
-  font: 'Source Code Pro' ;
+  font-family: "Segoe UI"; 
+  font-variant: small-caps; 
   border-color: var(--Secondary_color) ;
   border-width: 1px ;
   color: var(--App_color) ;
@@ -917,3 +1060,5 @@ add this to webui.py besides prevent_thread_lock=True, ->
 favicon_path="favicon.svg",
 
 */
+
+

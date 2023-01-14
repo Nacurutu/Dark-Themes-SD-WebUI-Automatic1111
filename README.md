@@ -160,22 +160,24 @@ Steps:
 Change the color variables on the user.css for the ones you want.
 
 ```css
-*THEME VARIABLES*/
+/*THEME VARIABLES*/
 :root, * , quickcss_target{
-    
     --Primary_color: #E94822;
     --Secondary_color: #F2910A;
     --Input_text_color: #EFD510;
     --Input_text_color_focus: #ffffff;
     --App_color: #F2910A;
     --Background_color: #2C2D34;
+    --Checked_text: #F2910A;
     /*ENDCOLORPICKERS*/
     --UI_radius: 0;
-    /*BREAKFILEREADER*/ 
+    --left_pannel_width: 40;
+    /*BREAKFILEREADER*/
     --logo: url('file=logo.png');
     --favicon: url('file=favicon.svg');
- 
+    --left-column: calc(20px *var(--left_pannel_width));
 }
+
 ```
 
 The Variables you need to change on the user.css file are:
@@ -232,6 +234,13 @@ https://necolas.github.io/normalize.css/
 
 > UPDATE -- 01/05/2023 
 > 
+> - Minor fixes
+> - Code cleaned a bit.
+
+
+> UPDATE -- 01/14/2023 
+> 
+> - img2img tab layout restructured. (img2img tab on mobile version broken with this update - working on it)
 > - Minor fixes
 > - Code cleaned a bit.
 

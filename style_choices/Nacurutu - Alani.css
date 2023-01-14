@@ -241,6 +241,18 @@ background-color: transparent !important;
   transition: all 0.3s ease-in-out ;
 }
 
+
+.backdrop-blur .modify-upload .hover\:shadow-xl{
+  border-style:solid;
+  border-color: var(--Secondary_color);
+  border-width:1px;
+ }
+ 
+ /* Svg */
+ .backdrop-blur .modify-upload svg{
+  display:block !important;
+ }
+
 /* Gallery items*/
 /*----------------------------------------------------------------*/
 #gallery_item {
@@ -378,10 +390,11 @@ color: var(--Primary_color);
 /* img2img tab Layout test (WORK IN PROGRESS) v2
 /*----------------------------------------------------------------*/
 
-/*change parameters tab order / parameters left - tabs center*/
+/*Puts settings and canvas next to each other. Flex grow make entire section bigger than the gallery*/
 #img2img_settings { 
   display: flex; 
   flex-direction: row-reverse;
+  flex-grow: 3 !important;
   
 }
 
@@ -390,30 +403,51 @@ color: var(--Primary_color);
   flex-wrap:nowrap;
  }
 
+
+/*Tabs and inpainting canvas, add less flex shrink to make canvas take up more space*/
+#mode_img2img {
+  flex-shrink: 0.4;
+}
+
 /* img2img tabs container fixed width and height */
+
  .dark .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem{
-  max-height:730px !important;
-  min-height: 730px !important;
+  max-height:900px !important;
+  min-height: 900px !important;
  
  }
 
  .dark .min-h-screen .mx-auto .overflow-hidden #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem > .overflow-hidden > .overflow-hidden{
-  max-height: 710px !important;
-  min-height: 710px !important;
+  max-height: 880px !important;
+  min-height: 880px !important;
   
  }
 
 .dark .min-h-screen .mx-auto .overflow-hidden #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem .overflow-hidden .overflow-hidden .h-60 .cursor-pointer{
-  max-height: 690px !important;
-  min-height: 690px !important;
+  max-height: 860px !important;
+  min-height: 860px !important;
 
  }
 
 .dark .overflow-hidden > .overflow-hidden > .flex-wrap > .overflow-hidden > .flex-col {
 
-max-width: 730px !important;
-min-width: 730px !important;
+max-width: 1200px !important;
+min-width: 610px !important;
 }
+
+/* Overflow hidden */
+.dark .tabitem:nth-child(3) .overflow-hidden:nth-child(1) .overflow-hidden:nth-child(3) .flex-wrap:nth-child(1) > .overflow-hidden:nth-child(2) > .overflow-hidden:nth-child(2){
+  min-width:450px !important;
+  max-width: 610px;
+  flex-direction:column;
+  align-self:center;
+ }
+
+.dark .min-h-screen .mx-auto .overflow-hidden:nth-child(1) #tabs .tabitem:nth-child(3) .overflow-hidden:nth-child(1) .overflow-hidden:nth-child(3) .flex-wrap:nth-child(1) > .overflow-hidden:nth-child(2) > .overflow-hidden:nth-child(2){
+  min-width:430px !important;
+ }
+ 
+
 
 /* Trying to fix the Resize issue on inpainting tab */
 
@@ -608,12 +642,14 @@ min-width: 730px !important;
   height: 6px ;
   border-radius: 3px ;
   background:  var(--App_color) ;
+  opacity: 0.6;
   
 }
 
 .gradio-container input[type=range]:hover::-webkit-slider-runnable-track {
   background-image: linear-gradient(90deg, var(--App_color), var(--Primary_color));
   background-repeat: no-repeat;
+  opacity: 1;
 }
 
 .gradio-container input[type=range]::-moz-range-track {
@@ -621,6 +657,7 @@ min-width: 730px !important;
   height: 6px ;
   border-radius: 3px ;
   background:  var(--Primary_color) ;
+  
 }
 
 .gradio-container input[type=range]:hover::-moz-range-track {
@@ -650,6 +687,7 @@ min-width: 730px !important;
   cursor: pointer ;
   -webkit-appearance: none ;
   margin-top: -5px ;
+  
 }
 
 .gradio-container input[type=range]:active::-webkit-slider-thumb {

@@ -34,6 +34,8 @@ What can you get with this?
 - Focus last interaction
 - "Source code pro" text font on inputs
 - Change sliders colors
+
+- Last update breaks img2img tab - Mobile version. (Still working on it)
 ```
 #
 Important:

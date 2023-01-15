@@ -268,7 +268,7 @@ Done:
 
 # 💙 Big Thanks to:
 
-> - @DarkVamprism, @masslevel and @vladmandic, this was made using some code from their user.css files posted here on github
+> - @DarkVamprism, @masslevel, nectar9000 and @vladmandic, this was made using some code from their user.css files posted here on github
 > - @ParityError for the Logo and Logo Animation inspired by @Ladypoly
 > - @masslevel for inspiring the Neon color palette 
 > - All the community

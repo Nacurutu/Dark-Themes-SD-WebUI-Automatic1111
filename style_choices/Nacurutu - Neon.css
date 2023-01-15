@@ -401,19 +401,19 @@ color: var(--Primary_color);
 /* img2img tabs container fixed width and height */
 
 .dark .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem{
-  max-height:880px !important;
-  min-height:880px !important;
+  max-height:800px !important;
+  min-height:800px !important;
  
 }
 
 .dark .min-h-screen .mx-auto .overflow-hidden #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem > .overflow-hidden > .overflow-hidden{
-  max-height: 860px !important;
-  min-height: 860px !important;
+  max-height: 780px !important;
+  min-height: 780px !important;
 }
 
 .dark .min-h-screen .mx-auto .overflow-hidden #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem .overflow-hidden .overflow-hidden .h-60 .cursor-pointer{
-  max-height: 830px !important;
-  min-height: 830px !important;
+  max-height: 760px !important;
+  min-height: 760px !important;
 }
 
 .dark .overflow-hidden > .overflow-hidden > .flex-wrap > .overflow-hidden > .flex-col {
@@ -451,8 +451,6 @@ color: var(--Primary_color);
   border-color:var(--Secondary_color);
   border-width:0.5px !important;
  }
-
-
 
 /*----------------------------------------------------------------*/
 /*----------------------------------------------------------------*/

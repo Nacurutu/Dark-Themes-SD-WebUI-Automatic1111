@@ -176,7 +176,10 @@ input[type=color] {
 .dark .bg-gray-950,
 .dark fieldset span.text-gray-500, 
 .dark .gr-block.gr-box span.text-gray-500,
-.dark label.block span {
+.dark label.block span,
+#quicksettings,
+#tabs .tabitem .gr-compact {
+ 
   background-color: var(--Background_color);
 }
 
@@ -381,26 +384,26 @@ color: var(--Primary_color);
 /*----------------------------------------------------------------*/
 
 /*Puts settings and canvas next to each other. Flex grow make entire section bigger than the gallery*/
-#img2img_settings { 
+/*#img2img_settings { 
   display: flex; 
   flex-direction: row-reverse;
-  flex-grow: 3 !important;
+  flex-grow: 2 !important;
 }
 
 /* img2img tabs panel no wrap*/
-.dark .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden > .flex-col > .flex-wrap{
+/*.dark .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden > .flex-col > .flex-wrap{
   flex-wrap:nowrap;
  }
 
 
 /*Tabs and inpainting canvas, add less flex shrink to make canvas take up more space*/
-#mode_img2img {
+/*#mode_img2img {
   flex-shrink: 0.4;
 }
 
 /* img2img tabs container fixed width and height */
 
-.dark .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem{
+/*.dark .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem{
   max-height:800px !important;
   min-height:800px !important;
  
@@ -422,7 +425,7 @@ color: var(--Primary_color);
 }
 
 /* Overflow hidden */
-.dark .tabitem:nth-child(3) .overflow-hidden:nth-child(1) .overflow-hidden:nth-child(3) .flex-wrap:nth-child(1) > .overflow-hidden:nth-child(2) > .overflow-hidden:nth-child(2){
+/*.dark .tabitem:nth-child(3) .overflow-hidden:nth-child(1) .overflow-hidden:nth-child(3) .flex-wrap:nth-child(1) > .overflow-hidden:nth-child(2) > .overflow-hidden:nth-child(2){
   min-width:450px !important;
   max-width: 610px;
   flex-direction:column;
@@ -433,18 +436,27 @@ color: var(--Primary_color);
   min-width:430px !important;
  }
 
+ #tabs > .tabitem > .overflow-hidden > .overflow-hidden > .flex-wrap > .overflow-hidden > .overflow-hidden{
+  padding-top:12px;
+ }
+
+ .tabitem .overflow-hidden .overflow-hidden .flex-wrap > .overflow-hidden > .svelte-10ogue4{
+  padding-top:32px;
+ }
+
 /* Trying to fix the Resize issue on inpainting tab */
 
-.dark #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem .overflow-hidden .overflow-hidden .h-60 .cursor-pointer .h-full .hover\:cursor-none{
+/*.dark #tabs .tabitem .overflow-hidden .overflow-hidden .flex-wrap .overflow-hidden .flex-col .tabitem .overflow-hidden .overflow-hidden .h-60 .cursor-pointer .h-full .hover\:cursor-none{
   width: 100% !important;
   height:100% !important;
  }
 
  /* New img2img buttons reposition and border*/
 
- #tabs .tabitem .gr-compact{
-  margin-top:18px;
+ /*#tabs .tabitem .gr-compact{
+  margin-top:30px;
   z-index: 100;
+  background-color: transparent;
  }
 
  #tabs .gr-compact .gr-button-secondary{

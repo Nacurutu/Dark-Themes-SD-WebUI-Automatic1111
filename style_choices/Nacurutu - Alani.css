@@ -70,15 +70,23 @@ input[type=color] {
 * .meta-text,
 * .wrap.m-12 svg, 
 * .wrap.z-20 svg,
-* .wrap.svelte-1w9161c {
+* .wrap.svelte-5usjvi {
   display:none ;
-  inset: 100%;
+  inset: 100% ;
 } 
-
 
 /*Css show loading text on SD models selector*/
 /*----------------------------------------------------------------*/
-#setting_sd_model_checkpoint .wrap.svelte-1w9161c {
+#setting_sd_model_checkpoint .wrap.svelte-5usjvi,
+#setting_sd_model_checkpoint .meta-text-center,
+#setting_sd_model_checkpoint .meta-text {
+  inset: 0 ;
+  display: flex;
+  justify-content: center;
+  color: var(--Input_text_color);
+} 
+
+#setting_sd_model_checkpoint .wrap.svelte-5usjvi {
   inset: 0 ;
   display: flex;
   justify-content: center;
@@ -112,7 +120,11 @@ input[type=color] {
 /* UI border radius */
 /*----------------------------------------------------------------*/
 
-.gradio-container * {
+.dark .gradio-container *,
+.dark .gr-compact *,
+.dark .rounded-t-lg,
+.dark .tabitem *,
+.dark .flex-wrap * {
   border-radius: calc(0.25px *var(--UI_radius)) !important;
 }
 
@@ -378,10 +390,48 @@ color: var(--Primary_color);
   max-width: var(--left-column); 
 }
 
+/* TI - HN - LoRa Cards */
+#tabs .tabitem .card{
+ width:150px;
+ height:224px;
+ font-size: 60%;
+ text-align: center;
+ color: var(--Primary_color);
+}
+
+#tabs .tabitem .card:hover {
+border-width: 4px ;
+border-color: var(--Primary_color);
+
+}
+
+/* Extra network cards */
+#tabs .tabitem .extra-network-cards{
+ display:flex;
+ flex-wrap:wrap;
+ justify-content:center;
+}
 
 /*----------------------------------------------------------------*/
 /* img2img tab Layout test (WORK IN PROGRESS) v2
 /*----------------------------------------------------------------*/
+
+/* New img2img buttons reposition and border*/
+
+#tabs .flex-wrap .tabitem .gr-compact{
+ margin-left:0px;
+ z-index: 10;
+ border-color: var(--Secondary_color);
+}
+
+.dark .gr-compact .flex-col .tabitem .flex-col .gr-compact .gr-button-secondary{
+ border-width:1px !important;
+}
+
+
+/*------------------------------*/
+
+
 
 /*Puts settings and canvas next to each other. Flex grow make entire section bigger than the gallery*/
 /*#img2img_settings { 
@@ -434,10 +484,6 @@ color: var(--Primary_color);
 
 .dark .min-h-screen .mx-auto .overflow-hidden:nth-child(1) #tabs .tabitem:nth-child(3) .overflow-hidden:nth-child(1) .overflow-hidden:nth-child(3) .flex-wrap:nth-child(1) > .overflow-hidden:nth-child(2) > .overflow-hidden:nth-child(2){
   min-width:430px !important;
- }
-
- #tabs > .tabitem > .overflow-hidden > .overflow-hidden > .flex-wrap > .overflow-hidden > .overflow-hidden{
-  padding-top:12px;
  }
 
  .tabitem .overflow-hidden .overflow-hidden .flex-wrap > .overflow-hidden > .svelte-10ogue4{
@@ -504,7 +550,7 @@ color: var(--Primary_color);
   font-family: "Segoe UI"; 
   font-variant: small-caps; 
   border-color: var(--Primary_color) ;
-  border-width: 4px ;
+  border-width: 4px !important;
   background-image: var(--logo) ;
   background-size: cover ;
   background-position: center center ;
@@ -512,6 +558,7 @@ color: var(--Primary_color);
   color: var(--App_color) ;
   z-index: 10;
   transition: all 0.3s ease-in-out ;
+  border-radius: calc(0.25px *var(--UI_radius)) !important;
 }
 
 .dark .gr-button-secondary, 
@@ -522,6 +569,7 @@ color: var(--Primary_color);
   border-width: 1px ;
   color: var(--App_color) ;
   transition: all 0.3s ease-in-out ;
+  border-radius: calc(0.25px *var(--UI_radius)) !important;
 }
 
 /* Buttons pulse effect */

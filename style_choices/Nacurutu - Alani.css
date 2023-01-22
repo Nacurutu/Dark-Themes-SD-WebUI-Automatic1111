@@ -124,7 +124,8 @@ input[type=color] {
 .dark .gr-compact *,
 .dark .rounded-t-lg,
 .dark .tabitem *,
-.dark .flex-wrap * {
+.dark .flex-wrap *,
+.dark .svelte-10ogue4 > .flex-col {
   border-radius: calc(0.25px *var(--UI_radius)) !important;
 }
 
@@ -391,6 +392,7 @@ color: var(--Primary_color);
 }
 
 /* TI - HN - LoRa Cards */
+/*----------------------------------------------------------------*/
 #tabs .tabitem .card{
  width:150px;
  height:224px;
@@ -411,6 +413,14 @@ border-color: var(--Primary_color);
  flex-wrap:wrap;
  justify-content:center;
 }
+
+
+/* Options Row */
+/*----------------------------------------------------------------*/
+
+.dark .flex-col:nth-child(2) .flex-wrap:nth-child(2){
+  justify-content:center;
+ }
 
 /*----------------------------------------------------------------*/
 /* img2img tab Layout test (WORK IN PROGRESS) v2
@@ -667,7 +677,13 @@ border-color: var(--Primary_color);
 /*----------------------------------------------------------------*/
 #quicksettings [id^="setting_"] {
   display: grid ;
+  
 }
+
+#quicksettings [id^="setting_"] input[type=range]{
+  display:flex;
+  align-items:flex-end !important;
+ }
 
 /* Gr-block gap and padding */
 /*----------------------------------------------------------------*/

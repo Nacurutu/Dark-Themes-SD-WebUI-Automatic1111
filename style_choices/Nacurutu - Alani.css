@@ -22,7 +22,7 @@ Original Style.css Edit
     --Checked_text: #F2910A;
     /*ENDCOLORPICKERS*/
     --UI_radius: 0;
-    --left_pannel_width: 40;
+    --left_pannel_width: 42;
     /*BREAKFILEREADER*/
     --logo: url('file=logo.png');
     --favicon: url('file=favicon.svg');
@@ -49,7 +49,7 @@ input[type=color] {
 
 /* Gradio app font */
 /*----------------------------------------------------------------*/
-.gradio-container { 
+.dark .gradio-container { 
   font-family: "Segoe UI"; 
   font-variant: small-caps; 
   }
@@ -266,6 +266,11 @@ background-color: transparent !important;
   display:block !important;
 }
 
+/* Live preview */
+#txt2img_gallery_container .livePreview{
+  background-color:transparent;
+ }
+
 /* Gallery items*/
 /*----------------------------------------------------------------*/
 #gallery_item {
@@ -283,7 +288,6 @@ background-color: transparent !important;
 
 /* Gallery items fix */
 /*----------------------------------------------------------------*/
-
 
 #img2img_image, 
 #img2img_image > .h-60, 
@@ -691,6 +695,19 @@ border-color: var(--Primary_color);
   row-gap: 1.1ch;
   padding: 1.1em;
 }
+
+
+/* Promtgen extension*/
+/*----------------------------------------------------------------*/
+#promptgen_results_column tr .sendto{
+  display:inline;
+ }
+
+ #promptgen_main .gr-compact{
+  min-width: var(--left-column); 
+  max-width: var(--left-column); 
+ }
+
 
 /*-------------------------------------*/
 /*---------------Sliders-------------- */
@@ -1163,3 +1180,6 @@ add this to webui.py besides prevent_thread_lock=True, ->
 favicon_path="favicon.svg",
 
 */
+
+
+  

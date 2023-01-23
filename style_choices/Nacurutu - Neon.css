@@ -49,7 +49,7 @@ input[type=color] {
 
 /* Gradio app font */
 /*----------------------------------------------------------------*/
-.gradio-container { 
+.dark .gradio-container { 
   font-family: "Segoe UI"; 
   font-variant: small-caps; 
   }
@@ -266,6 +266,11 @@ background-color: transparent !important;
   display:block !important;
 }
 
+/* Live preview */
+#txt2img_gallery_container .livePreview{
+  background-color:transparent;
+ }
+
 /* Gallery items*/
 /*----------------------------------------------------------------*/
 #gallery_item {
@@ -283,7 +288,6 @@ background-color: transparent !important;
 
 /* Gallery items fix */
 /*----------------------------------------------------------------*/
-
 
 #img2img_image, 
 #img2img_image > .h-60, 
@@ -691,6 +695,19 @@ border-color: var(--Primary_color);
   row-gap: 1.1ch;
   padding: 1.1em;
 }
+
+
+/* Promtgen extension*/
+/*----------------------------------------------------------------*/
+#promptgen_results_column tr .sendto{
+  display:inline;
+ }
+
+ #promptgen_main .gr-compact{
+  min-width: var(--left-column); 
+  max-width: var(--left-column); 
+ }
+
 
 /*-------------------------------------*/
 /*---------------Sliders-------------- */
@@ -1163,3 +1180,4 @@ add this to webui.py besides prevent_thread_lock=True, ->
 favicon_path="favicon.svg",
 
 */
+

@@ -36,7 +36,7 @@ What can you get with this?
 - Change sliders colors
 
 - Prefered Browser's zoom in at 75% to have a better experience
-- Last update breaks img2img tab - Mobile version. (Still working on it)
+
 ```
 #
 Important:
@@ -240,9 +240,13 @@ https://necolas.github.io/normalize.css/
 
 > UPDATE -- 01/14/2023 
 > 
-> - img2img tab layout restructured. (img2img tab on mobile version broken with this update - working on it)
 > - Minor fixes
 > - Code cleaned a bit.
+
+> UPDATE -- 01/24/2023 
+> 
+> - Fixed errors after new webUI updates
+> - Added a slider to resize new extra networks cards
 
 ----
 ---

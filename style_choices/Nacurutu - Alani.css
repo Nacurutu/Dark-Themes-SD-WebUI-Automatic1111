@@ -2,9 +2,9 @@
 Custom Dark theme for Stable Diffusion WebUI 
 Original Style.css Edit
 
-* @Version: alpha-v1.7
+* @Version: alpha-v1.9
 * @Author: Nacurutu
-* @Last Modified: 2023-01-14
+* @Last Modified: 2023-01-23
 * @Alani
 
 /*----------------------------------------------------------------*/
@@ -23,10 +23,12 @@ Original Style.css Edit
     /*ENDCOLORPICKERS*/
     --UI_radius: 0;
     --left_pannel_width: 42;
+    --cards_size: 50;
     /*BREAKFILEREADER*/
     --logo: url('file=logo.png');
     --favicon: url('file=favicon.svg');
     --left-column: calc(20px *var(--left_pannel_width));
+    
 }
 
 /* Quickcss extension */
@@ -398,12 +400,15 @@ color: var(--Primary_color);
 /* TI - HN - LoRa Cards */
 /*----------------------------------------------------------------*/
 #tabs .tabitem .card{
- width:150px;
- height:224px;
+ width: calc(3px *var(--cards_size));
+ height: calc(4.48px *var(--cards_size));
+ min-width: 50px !important;
+ min-height: 74.6px !important;
  font-size: 60%;
  text-align: center;
  color: var(--Primary_color);
 }
+
 
 #tabs .tabitem .card:hover {
 border-width: 4px ;

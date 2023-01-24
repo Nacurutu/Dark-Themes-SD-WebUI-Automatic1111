@@ -57,13 +57,11 @@ While pressing the Refresh button on your browser’s address bar will only do a
 
 <details>
 <summary>🔶 Alani</summary>
-<img src="https://user-images.githubusercontent.com/18109442/212449855-2c541016-2754-4a5d-be16-a11bb8e90934.png"/>
-<img src="https://user-images.githubusercontent.com/18109442/212476788-9c46e393-70ce-41e8-bbf4-d6b685f95223.png"/>
+<img src="https://user-images.githubusercontent.com/18109442/214368236-c7775dac-b15c-4913-96c5-07340d405717.png"/>
 </details>
 <details>
 <summary>🟣 Neon</summary>
-<img src="https://user-images.githubusercontent.com/18109442/212449931-78804c9d-561f-407d-a032-6b58e0ae8bed.png"/>
-<img src="https://user-images.githubusercontent.com/18109442/212476829-422aa85c-8c92-4a7e-afe9-68cb3c57aa4c.png"/>
+<img src="https://user-images.githubusercontent.com/18109442/214368580-8a4d9d42-a74e-4c1f-87bd-4f3b1dfb7551.png"/>
 </details>
 
 #

@@ -170,6 +170,7 @@ Change the color variables on the user.css for the ones you want.
     /*ENDCOLORPICKERS*/
     --UI_radius: 0;
     --left_pannel_width: 40;
+    --cards_size: 50;
     /*BREAKFILEREADER*/
     --logo: url('file=logo.png');
     --favicon: url('file=favicon.svg');
@@ -252,11 +253,6 @@ https://necolas.github.io/normalize.css/
 TO DO:
 
 > - Change the dropdown menu selection color from blue to a new one (it seems that this is handled by the OS and not the browser)
-> - Change the Gradio logo animation with this one:
-
-Logo Animation:
-
-<img src="https://user-images.githubusercontent.com/36368048/198925174-eb2f8647-50f1-4a31-8f6f-c32b3e78b3d5.png" width="10%">
 
 
 Anyone knows how to do anything from the TO DO list? 😉 

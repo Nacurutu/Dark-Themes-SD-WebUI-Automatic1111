@@ -35,7 +35,7 @@ What can you get with this?
 - "Source code pro" text font on inputs
 - Change sliders colors
 
-- Prefered Browser's zoom in at 75% to have a better experience
+- Prefered Browser's zoom at 75% to have a better experience
 
 ```
 #

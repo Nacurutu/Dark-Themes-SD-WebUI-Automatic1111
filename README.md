@@ -65,11 +65,11 @@ While pressing the Refresh button on your browser’s address bar will only do a
 </details>
 
 #
-## **Compatible with sd-web-ui-quickcss Extension**
+# **Compatible with sd-web-ui-quickcss Extension**
 
 How to use with the extension:
 
-Just clone this repository to the sd-web-ui-quickcss extension root folder.
+Just install the Extension. Theme included there.
 #
 **For more information regarding the extension, please visit this repository:**
 

@@ -1,4 +1,13 @@
 <h1 align="center">
+Project paused until further notice
+
+<br>
+<br>
+
+#
+
+
+<h1 align="center">
 	<img src="https://user-images.githubusercontent.com/36368048/196555507-ca0df84e-5fe3-4dbf-9a72-11e8081f16bb.svg" width="100" alt="Logo"/><br/>
 	<img src="https://user-images.githubusercontent.com/18109442/210565532-ae64cfbb-b199-48ed-b8f8-036e01a53285.png" height="30" width="0px"/>
 	Dark Themes for <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Stable Diffusion Web UI</a>
